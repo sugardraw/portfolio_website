@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import { getRandomHeaderLine } from "../helper";
-import Canvas from "./canvas/Canvas";
 
+import Header from "./header/Header";
 
 import Navigation from "./Navigation";
 
@@ -9,7 +8,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      model: "" 
+      model: ""
     };
   }
   changeModel = e => {
@@ -20,8 +19,8 @@ class App extends Component {
     return (
       <div>
         <Navigation />
-        <Canvas tagline={getRandomHeaderLine(0)} />
-     
+
+        <Header />
       </div>
     );
   }

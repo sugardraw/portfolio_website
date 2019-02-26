@@ -6,8 +6,6 @@ import * as OBJLoader from "three-obj-loader";
 
 import model from "../../assets/models/dummy.obj";
 
-
-
 OBJLoader(THREE);
 
 export default class Canvas extends Component {
@@ -70,7 +68,7 @@ export default class Canvas extends Component {
 
         break;
       case "Torus":
-        const geo3 = new THREE.TorusGeometry(10,10);
+        const geo3 = new THREE.TorusGeometry(10, 10);
         threeEntryPoint(this.threeRootElement, geo3);
 
         break;
@@ -82,6 +80,7 @@ export default class Canvas extends Component {
   render() {
     return (
       <div
+
         className="canvas-canvas"
         ref={element => (this.threeRootElement = element)}
       >

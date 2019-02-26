@@ -45,3 +45,143 @@
   padding-right: 0px !important;
   padding-left: 0px !important;
 }
+
+//canvas///////////////
+
+#top {
+  margin-top: 21rem !important;
+}
+
+//navigation////////////
+
+.navbar {
+  padding: 0;
+}
+
+.bg-dark {
+  background-color: blue !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.text-white {
+  padding: 1rem 2rem 1rem 3rem;
+}
+
+.navbar-dark .navbar-toggler {
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  font-size: 2.25rem !important;
+  line-height: 1 !important;
+  border: 1px solid transparent !important;
+}
+
+.navbar-dark .navbar-toggler-icon {
+  background-image: url(../assets/images/if_menu-alt_134216.svg);
+}
+
+.navbar-dark .navbar-toggler-icon-close {
+  background-image: url(../assets/images/600a68c9-96c6-444c-93ba-b3a4d7f6a06c.svg);
+}
+#change-header {
+  background-image: url(../assets/images/exchange-alt-solid.svg);
+  background-repeat: no-repeat;
+
+  font-size: 2.25rem !important;
+}
+
+.menu {
+  display: flex;
+  max-width: 40vw;
+  flex-wrap: wrap;
+}
+
+.text-muted-wrapper {
+  padding: 1rem;
+  max-width: 20vw;
+}
+
+.text-muted {
+  color: #ffffff !important;
+  position: relative;
+  top: 3.5rem;
+  left: -2rem;
+}
+
+button:focus {
+  outline: none !important;
+}
+
+svg {
+  margin-left: 47vw;
+  bottom: 9rem;
+  position: relative;
+}
+
+#scroll-arrow-bottom {
+  bottom: -26rem;
+  transform: rotateZ(180deg);
+}
+
+@media screen and (max-width: 720px) {
+  svg {
+    margin-left: 40vw;
+    transform: scale(0.7);
+  }
+  .navbar-toggler {
+    transform: scale(0.8);
+    right: 1rem !important;
+  }
+}
+
+//welcome text and intro
+
+.intro {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Poiret One", cursive;
+}
+
+.intro-text {
+  margin: 10rem 3rem 0rem 4rem !important;
+  z-index: 1100 !important;
+  max-width: 40vw;
+}
+
+.intro-img {
+  width: 50vw;
+  height: 88vh;
+  transform: skewY(35deg);
+  background-color: blue;
+}
+
+@media screen and (max-width: 1400px) {
+  .intro-text {
+    font-size: 3.7rem;
+  }
+  .intro-img {
+    height: 77vh;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .intro-text {
+    max-width: 100vw;
+  }
+  .intro-img {
+    width: 100vw;
+    background: linear-gradient(-216deg, white 23%, blue 23.1%);
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .intro-text {
+    text-align: center;
+    margin: 5rem 1.5rem 0rem 2rem !important;
+    font-size: 8.6vw;
+  }
+}

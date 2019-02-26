@@ -2,11 +2,7 @@ import * as THREE from "three";
 import SceneSubject from "./SceneSubject";
 import GeneralLights from "./GeneralLights";
 
-
-
-
-export default (canvas,geo, model) => {
-   
+export default (canvas, geo) => {
   const clock = new THREE.Clock();
   const origin = new THREE.Vector3(0, 0, 0);
 
@@ -20,12 +16,10 @@ export default (canvas,geo, model) => {
     y: 0
   };
 
-
-
   const scene = buildScene();
   const renderer = buildRender(screenDimensions);
   const camera = buildCamera(screenDimensions);
-  const sceneSubjects = createSceneSubjects(scene, geo, model);
+  const sceneSubjects = createSceneSubjects(scene, geo);
 
   function buildScene() {
     const scene = new THREE.Scene();
@@ -68,7 +62,10 @@ export default (canvas,geo, model) => {
   }
 
   function createSceneSubjects(scene) {
-    const sceneSubjects = [new GeneralLights(scene), new SceneSubject(scene, geo)];
+    const sceneSubjects = [
+      new GeneralLights(scene),
+      new SceneSubject(scene, geo)
+    ];
 
     return sceneSubjects;
   }

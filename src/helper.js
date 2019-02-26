@@ -17,6 +17,12 @@ export function MakeRandomQuestions() {
 }
 
 
+/**if the page has no backend you can use netlify and gitHub pages
+for bigger projects: heroku, Digital Ocean, aws
+ * 
+ */
+
+
 
 
 
