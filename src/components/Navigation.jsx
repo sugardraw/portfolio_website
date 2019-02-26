@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import $ from "jquery";
-import { FaExchangeAlt } from "react-icons/fa";
+
 
 class Navigation extends Component {
   toggleNavigation = e => {
@@ -79,9 +79,9 @@ class Navigation extends Component {
             />
           </button>
         </nav>
-        <div>
-          <FaExchangeAlt />
-        </div>
+        {/* <div id="change-header" className="position-absolute">
+    
+        </div> */}
       </React.Fragment>
     );
   }

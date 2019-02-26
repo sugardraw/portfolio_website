@@ -7089,6 +7089,8 @@ a.text-dark:hover, a.text-dark:focus {
 #change-header {
   background-image: url(../assets/images/exchange-alt-solid.svg);
   background-repeat: no-repeat;
+  width: 70px;
+  height: 70px;
   font-size: 2.25rem !important; }
 
 .menu {
@@ -7134,10 +7136,12 @@ svg {
 .intro-text {
   margin: 10rem 3rem 0rem 4rem !important;
   z-index: 1100 !important;
-  max-width: 40vw; }
+  max-width: 40vw;
+  font-family: monospace; }
 
 .intro-img {
   width: 50vw;
+  margin-top: -21rem;
   height: 88vh;
   transform: skewY(35deg);
   background-color: blue; }

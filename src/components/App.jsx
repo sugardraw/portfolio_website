@@ -19,7 +19,6 @@ class App extends Component {
     return (
       <div>
         <Navigation />
-
         <Header />
       </div>
     );
