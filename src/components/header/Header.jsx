@@ -11,7 +11,7 @@ class Header extends Component {
         >
           <div>
             <h1 class="intro-text p-3 mt-3">
-              Hi, I am Sergio, Junior Web Developer, based in Berlin.
+              Hi, I am Sergio, <br/>Junior Web Developer, based in Berlin.
             </h1>
           </div>
           <div class="intro-img" />

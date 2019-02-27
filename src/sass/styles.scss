@@ -1,4 +1,9 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Anton');
+@import url('https://fonts.googleapis.com/css?family=Major+Mono+Display');
+
+@import url('https://fonts.googleapis.com/css?family=Arimo');
+
 
 /* desktop-x-small */
 @media all and (min-width: 0) and (max-width: 480px) {
@@ -40,17 +45,15 @@
   }
 }
 
+
+
 .container-fluid {
   width: 100%;
+
   padding-right: 0px !important;
   padding-left: 0px !important;
 }
 
-//canvas///////////////
-
-#top {
-  margin-top: 21rem !important;
-}
 
 //navigation////////////
 
@@ -145,24 +148,63 @@ svg {
   width: 100vw;
   height: 100vh;
   font-family: "Poiret One", cursive;
+
   
   
 }
 
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content; 
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  } 
+}
+
+
+@include keyframes(introAni) {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .intro-text {
-  margin: 10rem 3rem 0rem 4rem !important;
+  margin: 17.5rem 3rem 0rem 7rem !important;
   z-index: 1100 !important;
   max-width: 40vw;
-  font-family: monospace;
+
+  font-family: 'Arimo', sans-serif;
+  font-weight: 600;
+  font-size: 3.8rem;
+  -webkit-animation: introAni 1.2s cubic-bezier(.2,.6,.2,1);
+  -moz-animation: introAni 1.2s cubic-bezier(.2,.6,.2,1);
+  animation:introAni  1.2s cubic-bezier(.2,.6,.2,1);
+  -webkit-animation-fill-mode: backwards;
+  -moz-animation-fill-mode: backwards;
+  animation-fill-mode: backwards;
 }
 
 .intro-img {
   width: 50vw;
-  margin-top: -21rem;
   height: 88vh;
   transform: skewY(35deg);
   background-color: blue;
+
 }
+
+
+
+
 
 @media screen and (max-width: 1400px) {
   .intro-text {
