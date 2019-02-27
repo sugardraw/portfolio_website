@@ -1,13 +1,5 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
-<<<<<<< HEAD
-@import url('https://fonts.googleapis.com/css?family=Anton');
-@import url('https://fonts.googleapis.com/css?family=Major+Mono+Display');
-
-@import url('https://fonts.googleapis.com/css?family=Arimo');
-
-=======
 @import url("https://fonts.googleapis.com/css?family=Arimo");
->>>>>>> bb88681c7e7f4e1db0f3c1ac2b51a8ac8f0f6607
 
 /* desktop-x-small */
 @media all and (min-width: 0) and (max-width: 480px) {
@@ -169,12 +161,6 @@ svg {
   width: 100vw;
   height: 100vh;
   font-family: "Poiret One", cursive;
-<<<<<<< HEAD
-
-  
-  
-=======
->>>>>>> bb88681c7e7f4e1db0f3c1ac2b51a8ac8f0f6607
 }
 
 @mixin keyframes($name) {
@@ -206,18 +192,6 @@ svg {
   margin: 17.5rem 3rem 0rem 7rem !important;
   z-index: 1100 !important;
   max-width: 40vw;
-<<<<<<< HEAD
-
-  font-family: 'Arimo', sans-serif;
-  font-weight: 600;
-  font-size: 3.8rem;
-  -webkit-animation: introAni 1.2s cubic-bezier(.2,.6,.2,1);
-  -moz-animation: introAni 1.2s cubic-bezier(.2,.6,.2,1);
-  animation:introAni  1.2s cubic-bezier(.2,.6,.2,1);
-  -webkit-animation-fill-mode: backwards;
-  -moz-animation-fill-mode: backwards;
-  animation-fill-mode: backwards;
-=======
   font-weight: 600;
   font-family: "Arimo", sans-serif;
 }
@@ -291,22 +265,16 @@ svg.intro {
   100% {
     stroke-dashoffset: 0;
   }
->>>>>>> bb88681c7e7f4e1db0f3c1ac2b51a8ac8f0f6607
 }
 
 .intro-img {
   width: 50vw;
   height: 88vh;
   transform: skewY(35deg);
-<<<<<<< HEAD
-  background-color: blue;
-
-=======
   background: linear-gradient(-184deg, rgb(252, 189, 15), rgb(248, 203, 78));
   -webkit-box-shadow: -44px 47px 74px -34px rgba(0, 0, 0, 0.67);
   -moz-box-shadow: -44px 47px 74px -34px rgba(0, 0, 0, 0.67);
   box-shadow: -44px 47px 74px -34px rgba(0, 0, 0, 0.67);
->>>>>>> bb88681c7e7f4e1db0f3c1ac2b51a8ac8f0f6607
 }
 
 
