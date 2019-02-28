@@ -4,11 +4,6 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-<<<<<<< HEAD
-@import url("https://fonts.googleapis.com/css?family=Anton");
-@import url("https://fonts.googleapis.com/css?family=Major+Mono+Display");
-=======
->>>>>>> bb88681c7e7f4e1db0f3c1ac2b51a8ac8f0f6607
 @import url("https://fonts.googleapis.com/css?family=Arimo");
 :root {
   --blue: #007bff;
@@ -7061,15 +7056,12 @@ a.text-dark:hover, a.text-dark:focus {
   padding-right: 0px !important;
   padding-left: 0px !important; }
 
-<<<<<<< HEAD
-=======
 body {
   background-color: #f5f6f7; }
 
 #top {
   margin-top: 21rem !important; }
 
->>>>>>> bb88681c7e7f4e1db0f3c1ac2b51a8ac8f0f6607
 .navbar {
   padding: 0; }
 
@@ -7096,7 +7088,7 @@ body {
   background-image: url(../assets/images/if_menu-alt_134216.svg); }
 
 .navbar-dark .navbar-toggler-icon-close {
-  background-image: url(../assets/images/600a68c9-96c6-444c-93ba-b3a4d7f6a06c.svg); }
+  background-image: url(../assets/images/close.svg); }
 
 #change-header {
   background-image: url(../assets/images/exchange-alt-solid.svg);
@@ -7123,10 +7115,11 @@ body {
 button:focus {
   outline: none !important; }
 
-.arrow-down {
+.down-arrow {
+  bottom: -32rem;
   position: relative;
   float: right;
-  margin-right: 1rem; }
+  margin-right: 3.44rem; }
 
 svg {
   margin-left: 47vw;
@@ -7174,29 +7167,11 @@ svg {
   100% {
     transform: translateY(0); } }
 
-.intro-text {
-  margin: 17.5rem 3rem 0rem 7rem !important;
-  z-index: 1100 !important;
-  max-width: 40vw;
-<<<<<<< HEAD
-  font-family: 'Arimo', sans-serif;
-  font-weight: 600;
-  font-size: 3.8rem;
-  -webkit-animation: introAni 1.2s cubic-bezier(0.2, 0.6, 0.2, 1);
-  -moz-animation: introAni 1.2s cubic-bezier(0.2, 0.6, 0.2, 1);
-  animation: introAni 1.2s cubic-bezier(0.2, 0.6, 0.2, 1);
-  -webkit-animation-fill-mode: backwards;
-  -moz-animation-fill-mode: backwards;
-  animation-fill-mode: backwards; }
-=======
-  font-weight: 600;
-  font-family: "Arimo", sans-serif; }
-
 svg.intro {
-  margin-left: 4vw;
-  bottom: 9rem;
+  margin-left: -70vw;
+  bottom: 7rem;
   position: relative;
-  width: 804px;
+  max-width: 900px;
   max-height: 347px; }
   svg.intro .text {
     display: none; }
@@ -7243,16 +7218,40 @@ svg.intro {
 @keyframes dash {
   100% {
     stroke-dashoffset: 0; } }
->>>>>>> bb88681c7e7f4e1db0f3c1ac2b51a8ac8f0f6607
 
-.intro-img {
+.profile {
+  width: 425px; }
+
+.intro-polygon {
   width: 50vw;
+  top: -21rem;
+  position: relative;
   height: 88vh;
+  transform: skewY(35deg);
+  right: -60em;
+  max-height: 88vh;
+  overflow: hidden;
+  z-index: -3000;
   transform: skewY(35deg);
   background: linear-gradient(-184deg, #fcbd0f, #f8cb4e);
   -webkit-box-shadow: -44px 47px 74px -34px rgba(0, 0, 0, 0.67);
   -moz-box-shadow: -44px 47px 74px -34px rgba(0, 0, 0, 0.67);
   box-shadow: -44px 47px 74px -34px rgba(0, 0, 0, 0.67); }
+
+.intro-polygon::before {
+  content: "";
+  background-image: url("../assets/images/Sergio.png");
+  background-repeat: no-repeat;
+  background-position: top left;
+  /* new styles */
+  position: absolute;
+  -webkit-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+  width: 100%;
+  /* something ridiculously big */
+  height: 100%;
+  /* something ridiculously big */ }
 
 @media screen and (max-width: 1400px) {
   .intro-text {

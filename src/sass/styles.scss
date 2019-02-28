@@ -73,6 +73,7 @@ body {
   justify-content: space-between;
   align-content: flex-start;
   flex-wrap: wrap;
+
 }
 
 .text-white {
@@ -93,7 +94,7 @@ body {
 }
 
 .navbar-dark .navbar-toggler-icon-close {
-  background-image: url(../assets/images/600a68c9-96c6-444c-93ba-b3a4d7f6a06c.svg);
+  background-image: url(../assets/images/close.svg);
 }
 #change-header {
   background-image: url(../assets/images/exchange-alt-solid.svg);
@@ -127,10 +128,11 @@ button:focus {
 
 //////
 
-.arrow-down {
+.down-arrow {
+  bottom: -32rem;
   position: relative;
   float: right;
-  margin-right:1rem;
+  margin-right: 3.44rem;
 }
 
 svg {
@@ -188,19 +190,13 @@ svg {
   }
 }
 
-.intro-text {
-  margin: 17.5rem 3rem 0rem 7rem !important;
-  z-index: 1100 !important;
-  max-width: 40vw;
-  font-weight: 600;
-  font-family: "Arimo", sans-serif;
-}
+
 
 svg.intro {
-  margin-left: 4vw;
-  bottom: 9rem;
+  margin-left: -70vw;
+  bottom: 7rem;
   position: relative;
-  width: 804px;
+  max-width: 900px;
   max-height: 347px;
 
   .text {
@@ -267,16 +263,49 @@ svg.intro {
   }
 }
 
-.intro-img {
-  width: 50vw;
-  height: 88vh;
+.profile{
+
+    width: 425px;
+
+}
+
+
+.intro-polygon {
+    width: 50vw;
+    top: -21rem;
+    position:relative;
+    height: 88vh;
+    transform: skewY(35deg);
+    right: -60em;
+    max-height:88vh;
+    overflow: hidden;
+    z-index: -3000;
   transform: skewY(35deg);
   background: linear-gradient(-184deg, rgb(252, 189, 15), rgb(248, 203, 78));
+
   -webkit-box-shadow: -44px 47px 74px -34px rgba(0, 0, 0, 0.67);
   -moz-box-shadow: -44px 47px 74px -34px rgba(0, 0, 0, 0.67);
   box-shadow: -44px 47px 74px -34px rgba(0, 0, 0, 0.67);
+
 }
 
+
+
+.intro-polygon::before {
+  content: "";
+ 
+  background-image: url('../assets/images/Sergio.png'); 
+  background-repeat: no-repeat; 
+  background-position: top left; 
+
+  /* new styles */
+  position: absolute;
+  -webkit-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+  width: 100%; /* something ridiculously big */
+  height: 100%; /* something ridiculously big */
+}
 
 
 
