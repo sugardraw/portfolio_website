@@ -7,25 +7,89 @@ import $ from "jquery";
 import { Link, animateScroll as scroll } from "react-scroll";
 
 class Header extends Component {
+
+  constructor() {
+    super();
+    this.state = {
+      mouse: {
+        _x: 0,
+        _y: 0,
+        setOrigin: function (e) {
+          this._x = e.offsetLeft + Math.floor(e.offsetWidth / 2);
+          this._y = e.offsetTop + Math.floor(e.offsetHeight / 2);
+        }
+      },
+      mouseX: 0,
+      mouseY: 0,
+    }
+    this.innerElement = null
+    this.container = null
+  }
+
   componentDidMount() {
-    $(function() {
+    $(function () {
       $(".intro").addClass("go");
 
-      $(".reload").click(function() {
+      $(".reload").click(function () {
         $(".intro")
           .removeClass("go")
           .delay(200)
-          .queue(function(next) {
+          .queue(function (next) {
             $(".intro").addClass("go");
             next();
           });
       });
     });
+    const container = document.querySelector(".intro-polygon");
+    const innerElement = document.querySelector("#dummy-helper");
+    this.setState(state => {
+      state.mouse.setOrigin(container);
+      return state
+    })
+
+    this.innerElement = innerElement;
+    this.container = container;
+
   }
 
   scrollToTop = () => {
-    scroll.scrollToTop();
+    scroll.scrollToBottom();
   };
+
+
+  updatePosition = (event) => {
+    console.log(event.clientX, event.clientY)
+    this.setState({
+      mouseX: event.clientX - this.state.mouse._x,
+      mouseY: event.clientY - this.state.mouse._y
+    }, this.updateTransformStyle(
+      (this.state.mouseX / this.innerElement.offsetHeight / 2).toFixed(2),
+      (this.state.mouseY / this.innerElement.offsetWidth / 2).toFixed(2)
+    ))
+  }
+
+
+  updateTransformStyle = (x, y) => {
+    console.log(x, y, this.innerElement)
+    var style = " skewY(35deg) rotateX(" + x * 1.3 + "deg) rotateY(" + y * 1.3 + "deg)";
+    console.log(this.state.innerElement)
+    this.container.style.transform = style;
+    this.container.style.webkitTransform = style;
+    this.container.style.mozTransform = style;
+    this.container.style.msTransform = style;
+    this.container.style.oTransform = style;
+  };
+
+
+
+
+  onMouseMoveHandler = (e) => {
+
+    this.updatePosition(e)
+  }
+
+
+
 
   render() {
     return (
@@ -34,26 +98,34 @@ class Header extends Component {
           class="d-flex justify-content-between flex-wrap flex-md-row intro"
           id="top"
         >
-          <div className="intro-polygon" />
+          <div
+            onMouseEnter={this.onMouseEnterHandler}
+            onMouseMove={this.onMouseMoveHandler}
+            onMouseLeave={this.onMouseLeaveHandler} className="intro-polygon"
+          >
+            <div id="dummy-helper"
+            ></div>
+
+          </div>
 
           <div class="text-ani">
             <SvgText />
           </div>
           <Link
-                activeClass="active"
-                to="section1"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
+            activeClass="active"
+            to="section1"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
             <img className="down-arrow" src={ArrowDown} alt="" />
           </Link>
         </div>
 
 
         <section
-        style={{ height: "100vw", width: "300px", backgroundColor: "red" }}
+          style={{ height: "100vw", width: "300px", backgroundColor: "red" }}
           title="section1"
 
           dark={true}
