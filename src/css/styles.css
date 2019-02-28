@@ -7057,7 +7057,7 @@ a.text-dark:hover, a.text-dark:focus {
   padding-left: 0px !important; }
 
 body {
-  background-color: #f5f6f7; }
+  background-color: #eff1f3; }
 
 #top {
   margin-top: 21rem !important; }
@@ -7116,10 +7116,9 @@ button:focus {
   outline: none !important; }
 
 .down-arrow {
-  bottom: -32rem;
-  position: relative;
-  float: right;
-  margin-right: 3.44rem; }
+  right: 2.4rem;
+  bottom: 1rem;
+  position: fixed; }
 
 svg {
   margin-left: 47vw;
@@ -7237,21 +7236,6 @@ svg.intro {
   -webkit-box-shadow: -44px 47px 74px -34px rgba(0, 0, 0, 0.67);
   -moz-box-shadow: -44px 47px 74px -34px rgba(0, 0, 0, 0.67);
   box-shadow: -44px 47px 74px -34px rgba(0, 0, 0, 0.67); }
-
-.intro-polygon::before {
-  content: "";
-  background-image: url("../assets/images/Sergio.png");
-  background-repeat: no-repeat;
-  background-position: top left;
-  /* new styles */
-  position: absolute;
-  -webkit-transform-origin: top left;
-  -ms-transform-origin: top left;
-  transform-origin: top left;
-  width: 100%;
-  /* something ridiculously big */
-  height: 100%;
-  /* something ridiculously big */ }
 
 @media screen and (max-width: 1400px) {
   .intro-text {
