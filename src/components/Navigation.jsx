@@ -43,14 +43,11 @@ class Navigation extends Component {
         <div className="collapse" id="navbarToggleExternalContent">
           <div className="bg-dark p-4">
             <div className="menu">
-              <h5 className="text-white h4">Content 1</h5>
-              <h5 className="text-white h4">Content 2</h5>
-              <h5 className="text-white h4">Content 3</h5>
-              <h5 className="text-white h4">Content 4</h5>
-              <h5 className="text-white h4">Content 5</h5>
-              <h5 className="text-white h4">Content 6</h5>
-              <h5 className="text-white h4">Content 7</h5>
-              <h5 className="text-white h4">Content 8</h5>
+              <h5 className="text-white h4">Projects</h5>
+              <h5 className="text-white h4">Resume</h5>
+              <h5 className="text-white h4">About</h5>
+              <h5 className="text-white h4">Contact</h5>
+
             </div>
 
             <div className="text-muted-wrapper">

@@ -7167,7 +7167,7 @@ svg {
     transform: translateY(0); } }
 
 svg.intro {
-  margin-left: -70vw;
+  margin-left: -72vw;
   bottom: 7rem;
   position: relative;
   max-width: 900px;
@@ -7221,7 +7221,17 @@ svg.intro {
 .profile {
   width: 425px; }
 
+#dummy-helper {
+  visibility: hidden;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: blue; }
+
 .intro-polygon {
+  perspective: 40px;
   width: 50vw;
   top: -21rem;
   position: relative;
@@ -7230,12 +7240,29 @@ svg.intro {
   right: -60em;
   max-height: 88vh;
   overflow: hidden;
-  z-index: -3000;
   transform: skewY(35deg);
   background: linear-gradient(-184deg, #fcbd0f, #f8cb4e);
   -webkit-box-shadow: -44px 47px 74px -34px rgba(0, 0, 0, 0.67);
   -moz-box-shadow: -44px 47px 74px -34px rgba(0, 0, 0, 0.67);
-  box-shadow: -44px 47px 74px -34px rgba(0, 0, 0, 0.67); }
+  box-shadow: -44px 47px 74px -34px rgba(0, 0, 0, 0.67);
+  transition: transform 1s;
+  transition-timing-function: cubic-bezier(0.22, 1.29, 0.82, 1.6); }
+
+.intro-polygon::before {
+  content: "";
+  margin: 13rem 8rem;
+  background-image: url(../assets/images/Sergio-2.png);
+  background-repeat: no-repeat;
+  background-position: -150px -100px;
+  position: absolute;
+  -webkit-transform-origin: top left;
+  transform-origin: top left;
+  -webkit-transform: skewY(-35deg);
+  transform: skewY(-35deg);
+  width: 100%;
+  height: 150%;
+  filter: contrast(107%);
+  -webkit-filter: contrast(107%); }
 
 @media screen and (max-width: 1400px) {
   .intro-text {
