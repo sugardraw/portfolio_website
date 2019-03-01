@@ -76,9 +76,7 @@ class Navigation extends Component {
             />
           </button>
         </nav>
-        {/* <div id="change-header" className="position-absolute">
     
-        </div> */}
       </React.Fragment>
     );
   }
