@@ -4,37 +4,37 @@ import SvgText from "../IntroSvg";
 import ArrowDown from "../../assets/images/arrow-down.svg";
 import Profile from "../../assets/images/Sergio.png";
 import $ from "jquery";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
+
 
 class Header extends Component {
-
   constructor() {
     super();
     this.state = {
       mouse: {
         _x: 0,
         _y: 0,
-        setOrigin: function (e) {
+        setOrigin: function(e) {
           this._x = e.offsetLeft + Math.floor(e.offsetWidth / 2);
           this._y = e.offsetTop + Math.floor(e.offsetHeight / 2);
         }
       },
       mouseX: 0,
-      mouseY: 0,
-    }
-    this.innerElement = null
-    this.container = null
+      mouseY: 0
+    };
+    this.innerElement = null;
+    this.container = null;
   }
 
   componentDidMount() {
-    $(function () {
+    $(function() {
       $(".intro").addClass("go");
 
-      $(".reload").click(function () {
+      $(".reload").click(function() {
         $(".intro")
           .removeClass("go")
           .delay(200)
-          .queue(function (next) {
+          .queue(function(next) {
             $(".intro").addClass("go");
             next();
           });
@@ -44,35 +44,34 @@ class Header extends Component {
     const innerElement = document.querySelector("#dummy-helper");
     this.setState(state => {
       state.mouse.setOrigin(container);
-      return state
-    })
+      return state;
+    });
 
     this.innerElement = innerElement;
     this.container = container;
-
   }
 
-  scrollToTop = () => {
-    scroll.scrollToBottom();
+
+
+  updatePosition = event => {
+    console.log(event.clientX, event.clientY);
+    this.setState(
+      {
+        mouseX: event.clientX - this.state.mouse._x,
+        mouseY: event.clientY - this.state.mouse._y
+      },
+      this.updateTransformStyle(
+        (this.state.mouseX / this.innerElement.offsetHeight / 2).toFixed(2),
+        (this.state.mouseY / this.innerElement.offsetWidth / 2).toFixed(2)
+      )
+    );
   };
 
-
-  updatePosition = (event) => {
-    console.log(event.clientX, event.clientY)
-    this.setState({
-      mouseX: event.clientX - this.state.mouse._x,
-      mouseY: event.clientY - this.state.mouse._y
-    }, this.updateTransformStyle(
-      (this.state.mouseX / this.innerElement.offsetHeight / 2).toFixed(2),
-      (this.state.mouseY / this.innerElement.offsetWidth / 2).toFixed(2)
-    ))
-  }
-
-
   updateTransformStyle = (x, y) => {
-    console.log(x, y, this.innerElement)
-    var style = " skewY(35deg) rotateX(" + x * 1.3 + "deg) rotateY(" + y * 1.3 + "deg)";
-    console.log(this.state.innerElement)
+    console.log(x, y, this.innerElement);
+    var style =
+      " skewY(35deg) rotateX(" + x * 1.3 + "deg) rotateY(" + y * 1.3 + "deg)";
+    console.log(this.state.innerElement);
     this.container.style.transform = style;
     this.container.style.webkitTransform = style;
     this.container.style.mozTransform = style;
@@ -80,16 +79,9 @@ class Header extends Component {
     this.container.style.oTransform = style;
   };
 
-
-
-
-  onMouseMoveHandler = (e) => {
-
-    this.updatePosition(e)
-  }
-
-
-
+  onMouseMoveHandler = e => {
+    this.updatePosition(e);
+  };
 
   render() {
     return (
@@ -101,11 +93,10 @@ class Header extends Component {
           <div
             onMouseEnter={this.onMouseEnterHandler}
             onMouseMove={this.onMouseMoveHandler}
-            onMouseLeave={this.onMouseLeaveHandler} className="intro-polygon"
+            onMouseLeave={this.onMouseLeaveHandler}
+            className="intro-polygon"
           >
-            <div id="dummy-helper"
-            ></div>
-
+            <div id="dummy-helper" />
           </div>
 
           <div class="text-ani">
@@ -113,7 +104,7 @@ class Header extends Component {
           </div>
           <Link
             activeClass="active"
-            to="section1"
+            to="projects"
             spy={true}
             smooth={true}
             offset={-70}
@@ -123,15 +114,7 @@ class Header extends Component {
           </Link>
         </div>
 
-
-        <section
-          style={{ height: "100vw", width: "300px", backgroundColor: "red" }}
-          title="section1"
-
-          dark={true}
-          id="section1"
-        />
-
+       
       </React.Fragment>
     );
   }
