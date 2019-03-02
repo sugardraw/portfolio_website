@@ -7543,11 +7543,15 @@ svg.intro {
 Project related informations
 
 */
-.project-infos h2 {
+.infos {
   position: absolute;
+  top: 100em;
+  left: 11em; }
+
+.project-infos h2 {
+  position: relative;
   font-family: "Arapey", serif;
   z-index: 3;
-  margin: 3em 0em 2em 2em;
   font-size: 6em;
   color: white; }
 
@@ -7555,12 +7559,18 @@ Project related informations
   position: relative;
   font-family: "Arapey", serif;
   z-index: 3;
-  padding-top: 1em;
-  font-size: 1.5em;
+  font-size: 1.9em;
   color: white; }
 
 .project-infos p {
+  position: relative;
+  font-family: "Arapey", serif;
+  z-index: 3;
+  font-size: 1em;
   color: white; }
+
+button {
+  width: 200px !important; }
 
 /**
 Media queries

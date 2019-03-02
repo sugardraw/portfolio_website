@@ -10,12 +10,16 @@ class Projects extends Component {
     super();
     this.state = {
       infos: null,
-      shown:false
+      shown: false
     };
   }
 
 
   componentDidMount() {
+
+
+    var self = this;
+    console.log(self)
     $(function () {
 
       $(".img-w").each(function () {
@@ -33,6 +37,11 @@ class Projects extends Component {
         let h = $(this).outerHeight();
         let x = $(this).offset().left;
         let y = $(this).offset().top;
+
+        self.setState(state => {
+          state.shown = !state.shown;
+          return state;
+        })
 
         $(".active")
           .not($(this))
@@ -55,6 +64,10 @@ class Projects extends Component {
 
     $(document).on("click", ".img-c.active", function () {
       let copy = $(this);
+      self.setState(state => {
+        state.shown = !state.shown;
+        return state;
+      })
       copy.removeClass("positioned active").addClass("postactive");
       setTimeout(function () {
         copy.remove();
@@ -72,14 +85,23 @@ class Projects extends Component {
           state.infos = (
             <div className="project-infos">
               <h2>Cocktail-App</h2>
-              <h6>"a team work together with Nizar Sariel"</h6>
+              <h6>Team work</h6>
+              <p>
+                
+                lorem
+                Lorem ipsum dolor sit amet consectetur adipisicing elit...S </p>
               <Link style={{
                 display: 'block',
                 width: '200px',
                 position: 'relative',
                 zIndex: '4'
-              }} to='/CocktailApp'> <button class="btn btn-outline-secondary" type="button" id="button-addon1">Visit on-line</button></Link>
-              <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit...S "</p>
+              }} to='/CocktailApp' target="_blank"> <button class="btn btn-outline-light mt-3 " type="button" id="button-addon1">Visit on-line</button></Link>
+              <Link style={{
+                display: 'block',
+                width: '200px',
+                position: 'relative',
+                zIndex: '4'
+              }} to='/CocktailApp' target="_blank"> <button class="btn btn-outline-light mt-3 " type="button" id="button-addon1">See the code on Github</button></Link>
             </div>)
           return state;
 
@@ -91,13 +113,22 @@ class Projects extends Component {
             <div className="project-infos">
               <h2>React+ThreeJS</h2>
               <h6>"Personal work"</h6>
+              <p>
+                
+                lorem
+                Lorem ipsum dolor sit amet consectetur adipisicing elit...S </p>
               <Link style={{
                 display: 'block',
                 width: '200px',
                 position: 'relative',
                 zIndex: '4'
-              }} to='/ReactThree'> <button class="btn btn-outline-secondary" type="button" id="button-addon1">Visit on-line</button></Link>
-              <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit...S "</p>
+              }} to='/ReactThree' target="_blank"> <button class="btn btn-outline-light mt-3 " type="button" id="button-addon1">Visit on-line</button></Link>
+              <Link style={{
+                display: 'block',
+                width: '200px',
+                position: 'relative',
+                zIndex: '4'
+              }} to='/Git-ReactThree' target="_blank"> <button class="btn btn-outline-light mt-3 " type="button" id="button-addon1">See the code on Github</button></Link>
             </div>)
           return state;
 
@@ -110,13 +141,16 @@ class Projects extends Component {
             <div className="project-infos">
               <h2>project-3</h2>
               <h6>"Personal work"</h6>
+              <p>
+                
+                lorem
+                Lorem ipsum dolor sit amet consectetur adipisicing elit...S </p>
               <Link style={{
                 display: 'block',
                 width: '200px',
                 position: 'relative',
                 zIndex: '4'
-              }} to='/ReactThree'> <button class="btn btn-outline-secondary" type="button" id="button-addon1">Visit on-line</button></Link>
-              <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit...S "</p>
+              }} to='/ReactThree' target="_blank"> <button class="btn btn-outline-light mt-3 " type="button" id="button-addon1">Visit on-line</button></Link>
             </div>)
           return state;
 
@@ -132,13 +166,16 @@ class Projects extends Component {
             <div className="project-infos">
               <h2>project-4</h2>
               <h6>"Personal work"</h6>
+              <p>
+                
+                lorem
+                Lorem ipsum dolor sit amet consectetur adipisicing elit...S </p>
               <Link style={{
                 display: 'block',
                 width: '200px',
                 position: 'relative',
                 zIndex: '4'
-              }} to='/ReactThree'> <button class="btn btn-outline-secondary" type="button" id="button-addon1">Visit on-line</button></Link>
-              <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit...S "</p>
+              }} to='/ReactThree' target="_blank"> <button class="btn btn-outline-light mt-3 " type="button" id="button-addon1">Visit on-line</button></Link>
             </div>)
           return state;
 
@@ -153,13 +190,16 @@ class Projects extends Component {
             <div className="project-infos">
               <h2>project-5</h2>
               <h6>"Personal work"</h6>
+              <p>
+                
+                lorem
+                Lorem ipsum dolor sit amet consectetur adipisicing elit...S </p>
               <Link style={{
                 display: 'block',
                 width: '200px',
                 position: 'relative',
                 zIndex: '4'
-              }} to='/ReactThree'> <button class="btn btn-outline-secondary" type="button" id="button-addon1">Visit on-line</button></Link>
-              <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit...S "</p>
+              }} to='/ReactThree' target="_blank"> <button class="btn btn-outline-light mt-3 " type="button" id="button-addon1">Visit on-line</button></Link>
             </div>)
           return state;
 
@@ -172,13 +212,16 @@ class Projects extends Component {
             <div className="project-infos">
               <h2>project-5</h2>
               <h6>"Personal work"</h6>
+              <p>
+                
+                lorem
+                Lorem ipsum dolor sit amet consectetur adipisicing elit...S </p>
               <Link style={{
                 display: 'block',
                 width: '200px',
                 position: 'relative',
                 zIndex: '4'
-              }} to='/ReactThree'> <button class="btn btn-outline-secondary" type="button" id="button-addon1">Visit on-line</button></Link>
-              <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit...S "</p>
+              }} to='/ReactThree' target="_blank"> <button class="btn btn-outline-light mt-3 " type="button" id="button-addon1">Visit on-line</button></Link>
             </div>)
           return state;
 
@@ -192,13 +235,16 @@ class Projects extends Component {
             <div className="project-infos">
               <h2>project-6</h2>
               <h6>"Personal work"</h6>
+              <p>
+                
+                lorem
+                Lorem ipsum dolor sit amet consectetur adipisicing elit...S </p>
               <Link style={{
                 display: 'block',
                 width: '200px',
                 position: 'relative',
                 zIndex: '4'
-              }} to='/ReactThree'> <button class="btn btn-outline-secondary" type="button" id="button-addon1">Visit on-line</button></Link>
-              <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit...S "</p>
+              }} to='/ReactThree' target="_blank"> <button class="btn btn-outline-light mt-3 " type="button" id="button-addon1">Visit on-line</button></Link>
             </div>)
           return state;
 
@@ -218,8 +264,8 @@ class Projects extends Component {
       <React.Fragment>
 
         <div className="infos">
-        
-        {this.state.shown && this.state.infos}</div>
+
+          {this.state.shown && this.state.infos}</div>
 
         <div id="projects">
           <div class="gallery">

@@ -9,8 +9,10 @@ class Router extends Component {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={App} />
-          <Route path='/cocktailApp' component={() => window.location = 'http://www.cocktail-app.sugardraw.de/'}/>
-          <Route path='/reactThree' component={() => window.location = 'http://www.react-threejs.sugardraw.de/'}/>
+          <Route path='/cocktailApp' component={() => window.location = 'http://www.cocktail-app.sugardraw.de/'} />
+          <Route path='/Git-CocktailApp' component={() => window.location = 'https://github.com/sugardraw/cocktail-app'} />
+          <Route path='/reactThree' component={() => window.location = 'http://www.react-threejs.sugardraw.de/'} />
+          <Route path='/Git-ReactThree' component={() => window.location = 'https://github.com/sugardraw/React-ThreeJS'} />
         </Switch>
       </BrowserRouter>
     );
