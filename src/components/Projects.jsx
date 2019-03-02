@@ -214,8 +214,6 @@ class Projects extends Component {
 
   render() {
 
- 
-
     return (
       <React.Fragment>
 
