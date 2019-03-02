@@ -5,6 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 @import url("https://fonts.googleapis.com/css?family=Arimo");
+@import url("https://fonts.googleapis.com/css?family=Arapey|Quicksand|Rokkitt");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -7021,6 +7022,9 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
+/**
+variables
+*/
 body {
   background-color: #eff1f3;
   position: relative; }
@@ -7138,7 +7142,7 @@ svg.intro {
   svg.intro .text {
     display: none; }
   svg.intro.go .text {
-    font-family: "Arimo", sans-serif;
+    font-family: "Arapey", serif;
     display: block; }
   svg.intro.go .text-stroke {
     fill: none;
@@ -7146,7 +7150,7 @@ svg.intro {
     stroke-width: 2.8px;
     stroke-dashoffset: -900;
     stroke-dasharray: 900;
-    stroke-linecap: butt;
+    stroke-linecap: round;
     stroke-linejoin: round;
     animation: dash 1s ease-in-out forwards; }
   svg.intro.go .text-stroke:nth-child(2) {
@@ -7169,7 +7173,7 @@ svg.intro {
   100% {
     stroke-dashoffset: 0; } }
 
-@-o-keyframes dash {
+@-ms-keyframes dash {
   100% {
     stroke-dashoffset: 0; } }
 
@@ -7187,7 +7191,7 @@ svg.intro {
   left: 50%;
   width: 20px;
   height: 20px;
-  background-color: blue; }
+  background-color: #fcbd0f !important; }
 
 .intro-polygon {
   perspective: 40px;
@@ -7201,9 +7205,9 @@ svg.intro {
   overflow: hidden;
   transform: skewY(35deg);
   background: linear-gradient(-184deg, #fcbd0f, #f8cb4e);
-  -webkit-box-shadow: -44px 47px 74px -34px rgba(0, 0, 0, 0.67);
-  -moz-box-shadow: -44px 47px 74px -34px rgba(0, 0, 0, 0.67);
-  box-shadow: -44px 47px 74px -34px rgba(0, 0, 0, 0.67);
+  -webkit-box-shadow: -44px 47px 74px rgba(0, 0, 0, 0.67);
+  -moz-box-shadow: -44px 47px 74px rgba(0, 0, 0, 0.67);
+  box-shadow: -44px 47px 74px rgba(0, 0, 0, 0.67);
   transition: transform 1s;
   transition-timing-function: cubic-bezier(0.22, 1.29, 0.82, 1.6); }
 
@@ -7266,59 +7270,259 @@ svg.intro {
   transform: scale(1.08);
   transition: transform cubic-bezier(0.4, 0, 0.2, 1) 450ms; }
 
-.img-c:hover .project-0::before {
-  content: "Project-0";
+@-webkit-keyframes banner-appears {
+  0% {
+    top: 100%;
+    left: 0%; }
+  100% {
+    top: 70%;
+    left: 10%; } }
+
+@-moz-keyframes banner-appears {
+  0% {
+    top: 100%;
+    left: 0%; }
+  100% {
+    top: 70%;
+    left: 10%; } }
+
+@-ms-keyframes banner-appears {
+  0% {
+    top: 100%;
+    left: 0%; }
+  100% {
+    top: 70%;
+    left: 10%; } }
+
+@keyframes banner-appears {
+  0% {
+    top: 100%;
+    left: 0%; }
+  100% {
+    top: 70%;
+    left: 10%; } }
+
+.img-c:hover .project-0::after {
+  content: "Cocktail App";
+  z-index: 20;
   position: absolute;
   text-align: center;
-  font-family: "Arimo", sans-serif;
+  font-family: "Arapey", serif;
+  font-size: 1.6em;
+  padding: 0.4em;
+  color: #711ea1;
+  top: 70%;
+  left: 20%; }
+
+.img-c:hover .project-0::before {
+  content: "";
+  z-index: 20;
+  position: absolute;
+  text-align: center;
+  font-family: "Arapey", serif;
   font-size: 2em;
-  color: white; }
+  color: #ffffff;
+  transform: skew(-35deg);
+  width: 280px;
+  height: 160px;
+  background-color: #fcbd0f !important;
+  -webkit-box-shadow: 44px 7px 74px -4px rgba(0, 0, 0, 0.77);
+  -moz-box-shadow: 44px 7px 74px -4px rgba(0, 0, 0, 0.77);
+  box-shadow: 44px 7px 74px -4px rgba(0, 0, 0, 0.77);
+  animation: banner-appears 0.23s forwards;
+  transition-timing-function: cubic-bezier(0.22, 1.29, 0.82, 1.6); }
+
+.img-c:hover .project-1::after {
+  content: "React + ThreeJS";
+  z-index: 20;
+  position: absolute;
+  text-align: center;
+  font-family: "Arapey", serif;
+  font-size: 1.6em;
+  padding: 0.4em;
+  color: #711ea1;
+  top: 70%;
+  left: 20%; }
 
 .img-c:hover .project-1::before {
-  content: "Project-1";
+  content: "";
+  z-index: 20;
   position: absolute;
   text-align: center;
-  font-family: "Arimo", sans-serif;
+  font-family: "Arapey", serif;
   font-size: 2em;
-  color: white; }
+  color: #ffffff;
+  transform: skew(-35deg);
+  width: 280px;
+  height: 160px;
+  background-color: #fcbd0f !important;
+  -webkit-box-shadow: 44px 7px 74px -4px rgba(0, 0, 0, 0.77);
+  -moz-box-shadow: 44px 7px 74px -4px rgba(0, 0, 0, 0.77);
+  box-shadow: 44px 7px 74px -4px rgba(0, 0, 0, 0.77);
+  animation: banner-appears 0.23s forwards;
+  transition-timing-function: cubic-bezier(0.22, 1.29, 0.82, 1.6); }
+
+.img-c:hover .project-2::after {
+  content: "Project-2";
+  z-index: 20;
+  position: absolute;
+  text-align: center;
+  font-family: "Arapey", serif;
+  font-size: 1.6em;
+  padding: 0.4em;
+  color: #711ea1;
+  top: 70%;
+  left: 20%; }
 
 .img-c:hover .project-2::before {
-  content: "Project-2";
+  content: "";
+  z-index: 20;
   position: absolute;
   text-align: center;
-  font-family: "Arimo", sans-serif;
+  font-family: "Arapey", serif;
   font-size: 2em;
-  color: white; }
+  color: #ffffff;
+  transform: skew(-35deg);
+  width: 280px;
+  height: 160px;
+  background-color: #fcbd0f !important;
+  -webkit-box-shadow: 44px 7px 74px -4px rgba(0, 0, 0, 0.77);
+  -moz-box-shadow: 44px 7px 74px -4px rgba(0, 0, 0, 0.77);
+  box-shadow: 44px 7px 74px -4px rgba(0, 0, 0, 0.77);
+  animation: banner-appears 0.23s forwards;
+  transition-timing-function: cubic-bezier(0.22, 1.29, 0.82, 1.6); }
+
+.img-c:hover .project-3::after {
+  content: "Project-3";
+  z-index: 20;
+  position: absolute;
+  text-align: center;
+  font-family: "Arapey", serif;
+  font-size: 1.6em;
+  padding: 0.4em;
+  color: #711ea1;
+  top: 70%;
+  left: 20%; }
 
 .img-c:hover .project-3::before {
-  content: "Project-3";
+  content: "";
+  z-index: 20;
   position: absolute;
   text-align: center;
-  font-family: "Arimo", sans-serif;
+  font-family: "Arapey", serif;
   font-size: 2em;
-  color: white; }
+  color: #ffffff;
+  transform: skew(-35deg);
+  width: 280px;
+  height: 160px;
+  background-color: #fcbd0f !important;
+  -webkit-box-shadow: 44px 7px 74px -4px rgba(0, 0, 0, 0.77);
+  -moz-box-shadow: 44px 7px 74px -4px rgba(0, 0, 0, 0.77);
+  box-shadow: 44px 7px 74px -4px rgba(0, 0, 0, 0.77);
+  animation: banner-appears 0.23s forwards;
+  transition-timing-function: cubic-bezier(0.22, 1.29, 0.82, 1.6); }
+
+.img-c:hover .project-4::after {
+  content: "Project-4";
+  z-index: 20;
+  position: absolute;
+  text-align: center;
+  font-family: "Arapey", serif;
+  font-size: 1.6em;
+  padding: 0.4em;
+  color: #711ea1;
+  top: 70%;
+  left: 20%; }
 
 .img-c:hover .project-4::before {
-  content: "Project-4";
+  content: "";
+  z-index: 20;
   position: absolute;
   text-align: center;
-  font-family: "Arimo", sans-serif;
+  font-family: "Arapey", serif;
   font-size: 2em;
-  color: white; }
+  color: #ffffff;
+  transform: skew(-35deg);
+  width: 280px;
+  height: 160px;
+  background-color: #fcbd0f !important;
+  -webkit-box-shadow: 44px 7px 74px -4px rgba(0, 0, 0, 0.77);
+  -moz-box-shadow: 44px 7px 74px -4px rgba(0, 0, 0, 0.77);
+  box-shadow: 44px 7px 74px -4px rgba(0, 0, 0, 0.77);
+  animation: banner-appears 0.23s forwards;
+  transition-timing-function: cubic-bezier(0.22, 1.29, 0.82, 1.6); }
+
+.img-c:hover .project-5::after {
+  content: "Project-5";
+  z-index: 20;
+  position: absolute;
+  text-align: center;
+  font-family: "Arapey", serif;
+  font-size: 1.6em;
+  padding: 0.4em;
+  color: #711ea1;
+  top: 70%;
+  left: 20%; }
 
 .img-c:hover .project-5::before {
-  content: "Project-5";
+  content: "";
+  z-index: 20;
   position: absolute;
   text-align: center;
-  font-family: "Arimo", sans-serif;
+  font-family: "Arapey", serif;
   font-size: 2em;
-  color: white; }
+  color: #ffffff;
+  transform: skew(-35deg);
+  width: 280px;
+  height: 160px;
+  background-color: #fcbd0f !important;
+  -webkit-box-shadow: 44px 7px 74px -4px rgba(0, 0, 0, 0.77);
+  -moz-box-shadow: 44px 7px 74px -4px rgba(0, 0, 0, 0.77);
+  box-shadow: 44px 7px 74px -4px rgba(0, 0, 0, 0.77);
+  animation: banner-appears 0.23s forwards;
+  transition-timing-function: cubic-bezier(0.22, 1.29, 0.82, 1.6); }
 
 .img-c.active {
   width: 100% !important;
   height: 100% !important;
   position: absolute;
   z-index: 2; }
+
+.img-c.active::before {
+  content: "";
+  content: "";
+  z-index: 20;
+  position: absolute;
+  text-align: center;
+  font-family: "Arapey", serif;
+  font-size: 2em;
+  color: #ffffff;
+  transform: skew(-35deg);
+  width: 280px;
+  height: 160px;
+  background-color: #fcbd0f !important;
+  -webkit-box-shadow: 44px 7px 74px -4px rgba(0, 0, 0, 0.77);
+  -moz-box-shadow: 44px 7px 74px -4px rgba(0, 0, 0, 0.77);
+  box-shadow: 44px 7px 74px -4px rgba(0, 0, 0, 0.77);
+  animation: banner-appears 0.23s forwards;
+  transition-timing-function: cubic-bezier(0.22, 1.29, 0.82, 1.6);
+  width: 50vw;
+  height: 80vh;
+  margin-top: 0%;
+  margin-left: -16%;
+  background-image: linear-gradient(-35deg, rgba(4, 0, 0, 0.5), #fcbd0f); }
+
+.img-c.active::after {
+  content: "";
+  text-align: center;
+  font-family: "Arapey", serif;
+  font-size: 10.6em;
+  padding: 0.4em;
+  display: block;
+  position: absolute;
+  background-image: linear-gradient(to top, #711ea1 0, #711ea191 100%);
+  height: 100%;
+  width: 100%; }
 
 .img-c.postactive {
   position: absolute;
@@ -7329,6 +7533,34 @@ svg.intro {
   left: 0 !important;
   top: 0 !important;
   transition-delay: 50ms; }
+
+.img-c.active.positioned {
+  left: 0 !important;
+  top: 0 !important;
+  transition-delay: 50ms; }
+
+/*
+Project related informations
+
+*/
+.project-infos h2 {
+  position: absolute;
+  font-family: "Arapey", serif;
+  z-index: 3;
+  margin: 3em 0em 2em 2em;
+  font-size: 6em;
+  color: white; }
+
+.project-infos h6 {
+  position: relative;
+  font-family: "Arapey", serif;
+  z-index: 3;
+  padding-top: 1em;
+  font-size: 1.5em;
+  color: white; }
+
+.project-infos p {
+  color: white; }
 
 /**
 Media queries

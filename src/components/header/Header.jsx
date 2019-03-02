@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import SvgText from "../IntroSvg";
 
 import ArrowDown from "../../assets/images/arrow-down.svg";
-import Profile from "../../assets/images/Sergio.png";
+
 import $ from "jquery";
 import { Link } from "react-scroll";
 

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import $ from "jquery";
 
 
+
 class Navigation extends Component {
   toggleNavigation = e => {
     console.log(e.target);
