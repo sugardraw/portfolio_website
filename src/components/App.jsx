@@ -8,18 +8,11 @@ import { animateScroll as scroll } from "react-scroll";
 import Navigation from "./Navigation";
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      model: ""
-    };
-  }
-  changeModel = e => {
-    this.setState({ model: e.target.value });
-  };
+  
   scrollToBottom = () => {
     scroll.scrollToBottom();
   };
+ 
 
   render() {
     return (

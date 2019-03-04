@@ -3,34 +3,35 @@ import $ from "jquery";
 import { Link } from "react-scroll";
 import { animateScroll as scroll } from "react-scroll";
 
+
+
 class Navigation extends Component {
-  scrollToTop = () => {
+    scrollToTop = () => {
     scroll.scrollToBottom();
   };
-  toggleNavigation = e => {
-    console.log(e.target);
-    e.target.classList.toggle("navbar-toggler-icon-close");
-  };
+  
 
   render() {
     return (
       <React.Fragment>
+     
         <div className="collapse" id="navbarToggleExternalContent">
           <div className="bg-dark p-4">
             <div className="menu">
-              <Link
-                activeClass="active"
-                to="projects"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
-                <h5 className="text-white h4">Projects</h5>
-              </Link>
+            <Link
+            activeClass="active"
+            to="projects"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
+      
+              <h5 className="text-white h4">Projects</h5>
+          </Link>
               <h5 className="text-white h4">Resume</h5>
               <h5 className="text-white h4">About</h5>
               <h5 className="text-white h4">Contact</h5>
+
             </div>
 
             <div className="text-muted-wrapper">
@@ -59,8 +60,7 @@ class Navigation extends Component {
             />
           </button>
         </nav>
-
-        
+    
       </React.Fragment>
     );
   }

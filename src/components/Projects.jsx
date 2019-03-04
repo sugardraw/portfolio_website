@@ -16,8 +16,23 @@ class Projects extends Component {
   }
 
   componentDidMount() {
-    console.log(ArrowDownLight);
     var self = this;
+
+    $(document).scroll(function() {
+      var scroll = $(window).scrollTop();
+
+      if (scroll > 800) {
+        $(".down-arrow ").css("display", "none");
+        $(".up-arrow-light").css("display", "block");
+        $(".arrow-down-light").css("display", "block");
+        console.log($(".arrow-down-light"))
+      } else {
+        $(".down-arrow").css("display", "block");
+        $(".up-arrow-light").css("display", "none");
+        $(".arrow-down-light").css("display", "none");
+      }
+    });
+
     console.log(self);
     $(function() {
       $(".img-w").each(function() {
@@ -27,6 +42,8 @@ class Projects extends Component {
           .attr("src");
         $(this)
           .not(".down-arrow")
+          .not(".up-arrow-light")
+          .not(".arrow-down-light")
           .css("background-image", "url(" + imgSrc + ")");
       });
 
@@ -35,14 +52,12 @@ class Projects extends Component {
         let h = $(this).outerHeight();
         let x = $(this).offset().left;
         let y = $(this).offset().top;
+     
 
         self.setState(state => {
           state.shown = !state.shown;
           return state;
         });
-
-        $(".down-arrow").attr("src", ArrowDownLight);
-        $(".up-arrow-light").css("display", "block");
 
         $(".active")
           .not($(this))
@@ -64,8 +79,10 @@ class Projects extends Component {
 
     $(document).on("click", ".img-c.active", function() {
       let copy = $(this);
-      $(".down-arrow").attr("src", ArrowDown);
-      $(".up-arrow-light").css("display", "none");
+
+      $(".down-arrow ").css("display", "none");
+      $(".up-arrow-light").css("display", "block");
+      $(".arrow-down-light").css("display", "block");
       self.setState(state => {
         state.shown = !state.shown;
         return state;
@@ -78,7 +95,8 @@ class Projects extends Component {
   }
 
   setInfos = e => {
-    let projectName = e.target.classList[1];
+    let projectName = e.target.classList[2];
+    console.log(projectName);
     this.forceUpdate();
     switch (projectName) {
       case "project-0":
@@ -88,7 +106,8 @@ class Projects extends Component {
               <h2>Cocktail-App</h2>
               <h6>Team work</h6>
               <p>
-                lorem Lorem ipsum dolor sit amet consectetur adipisicingelit...S{" "}
+                lorem Lorem ipsum dolor sit amet consectetur adipisicing
+                elit...S{" "}
               </p>
               <Link
                 style={{

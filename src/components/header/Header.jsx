@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import SvgText from "../IntroSvg";
 
 import ArrowDown from "../../assets/images/arrow-down.svg";
-import ArrowUpLightUp from "../../assets/images/arrow-up-light.svg";
+import ArrowUpLight from "../../assets/images/arrow-up-light.svg";
+import ArrowDownLight from "../../assets/images/arrow-down-light.svg";
 
 import $ from "jquery";
 import { Link } from "react-scroll";
-
 
 class Header extends Component {
   constructor() {
@@ -52,8 +52,6 @@ class Header extends Component {
     this.container = container;
   }
 
-
-
   updatePosition = event => {
     console.log(event.clientX, event.clientY);
     this.setState(
@@ -87,9 +85,10 @@ class Header extends Component {
   render() {
     return (
       <React.Fragment>
+        <div id="top" />
         <div
           class="d-flex justify-content-between flex-wrap flex-md-row intro"
-          id="top"
+          id="header-top"
         >
           <div
             onMouseEnter={this.onMouseEnterHandler}
@@ -105,29 +104,41 @@ class Header extends Component {
           </div>
           <Link
             activeClass="active"
-            to="projects"
+            to="top"
             spy={true}
             smooth={true}
             offset={-70}
-            duration={500}
+            duration={250}
           >
-            <img className="up-arrow-light" src={ArrowUpLightUp} alt="ArrowUpLightUp" />
-            <img className="down-arrow" src={ArrowDown} alt="ArrowUpLightDown" />
+            <img
+              className="up-arrow-light"
+              src={ArrowUpLight}
+              alt="ArrowUpLightUp"
+            />
           </Link>
           <Link
             activeClass="active"
             to="projects"
             spy={true}
             smooth={true}
-            offset={-70}
-            duration={500}
+            duration={250}
           >
-            <img className="up-arrow-light" src={ArrowUpLightUp} alt="ArrowUpLightUp" />
-            <img className="down-arrow" src={ArrowDown} alt="ArrowUpLightDown" />
+            <img className="down-arrow" src={ArrowDown} alt="arrow-down" />
+          </Link>
+          <Link
+            activeClass="active"
+            to="summary"
+            spy={true}
+            smooth={true}
+            duration={250}
+          >
+            <img
+              className="arrow-down-light"
+              src={ArrowDownLight}
+              alt="arrow-down-light"
+            />
           </Link>
         </div>
-
-       
       </React.Fragment>
     );
   }
