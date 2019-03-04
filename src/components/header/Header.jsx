@@ -86,8 +86,9 @@ class Header extends Component {
     return (
       <React.Fragment>
         <div id="top" />
+
         <div
-          class="d-flex justify-content-between flex-wrap flex-md-row intro"
+          class="d-flex justify-content-between flex-wrap  intro"
           id="header-top"
         >
           <div
@@ -102,14 +103,7 @@ class Header extends Component {
           <div class="text-ani">
             <SvgText />
           </div>
-          <Link
-            activeClass="active"
-            to="top"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={250}
-          >
+          <Link to="top" spy={true} smooth={true} offset={-70} duration={250}>
             <img
               className="up-arrow-light"
               src={ArrowUpLight}
@@ -117,21 +111,15 @@ class Header extends Component {
             />
           </Link>
           <Link
-            activeClass="active"
             to="projects"
             spy={true}
+            offset={-40}
             smooth={true}
             duration={250}
           >
             <img className="down-arrow" src={ArrowDown} alt="arrow-down" />
           </Link>
-          <Link
-            activeClass="active"
-            to="summary"
-            spy={true}
-            smooth={true}
-            duration={250}
-          >
+          <Link to="contact" spy={true} smooth={true} duration={250}>
             <img
               className="arrow-down-light"
               src={ArrowDownLight}

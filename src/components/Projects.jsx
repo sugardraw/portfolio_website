@@ -3,8 +3,6 @@ import $ from "jquery";
 import CocktailApp from "../assets/images/cocktail-app-screenshot.png";
 import ReactThreeJS from "../assets/images/react-threejs.png";
 import { Link } from "react-router-dom";
-import ArrowDownLight from "../assets/images/arrow-down-light.svg";
-import ArrowDown from "../assets/images/arrow-down.svg";
 
 class Projects extends Component {
   constructor() {
@@ -25,7 +23,6 @@ class Projects extends Component {
         $(".down-arrow ").css("display", "none");
         $(".up-arrow-light").css("display", "block");
         $(".arrow-down-light").css("display", "block");
-        console.log($(".arrow-down-light"))
       } else {
         $(".down-arrow").css("display", "block");
         $(".up-arrow-light").css("display", "none");
@@ -33,7 +30,6 @@ class Projects extends Component {
       }
     });
 
-    console.log(self);
     $(function() {
       $(".img-w").each(function() {
         $(this).wrap("<div class='img-c'></div>");
@@ -52,12 +48,20 @@ class Projects extends Component {
         let h = $(this).outerHeight();
         let x = $(this).offset().left;
         let y = $(this).offset().top;
-     
 
         self.setState(state => {
           state.shown = !state.shown;
           return state;
         });
+
+        //set the user view exactly on the right place
+
+        $("html, body").animate(
+          {
+            scrollTop: $(".infos").offset().top -600
+          },
+          500
+        );
 
         $(".active")
           .not($(this))
@@ -79,6 +83,12 @@ class Projects extends Component {
 
     $(document).on("click", ".img-c.active", function() {
       let copy = $(this);
+      $("html, body").animate(
+        {
+          scrollTop: $("#projects").offset().top-50
+        },
+        500
+      );
 
       $(".down-arrow ").css("display", "none");
       $(".up-arrow-light").css("display", "block");

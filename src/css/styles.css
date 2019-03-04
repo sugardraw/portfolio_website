@@ -7089,10 +7089,9 @@ button:focus {
 
 .down-arrow {
   right: 5rem;
-  bottom: 1rem;
-  z-index: 10;
-  position: fixed;
-  display: block; }
+  bottom: 3rem;
+  z-index: 100;
+  position: fixed; }
   .down-arrow:hover {
     cursor: pointer;
     transform: scale(1.2);
@@ -7100,8 +7099,8 @@ button:focus {
 
 .up-arrow-light {
   right: 5rem;
-  bottom: 5.8rem;
-  z-index: 10;
+  bottom: 7rem;
+  z-index: 100;
   position: fixed;
   transform: rotate(180deg);
   display: none; }
@@ -7112,7 +7111,7 @@ button:focus {
 
 .arrow-down-light {
   right: 5rem;
-  bottom: 1.8rem;
+  bottom: 3rem;
   z-index: 10;
   position: fixed;
   display: none; }
@@ -7572,7 +7571,7 @@ Project related informations
 */
 .infos {
   position: absolute;
-  top: 113em;
+  top: 163em;
   left: 11em; }
 
 .project-infos h2 {
@@ -7598,6 +7597,11 @@ Project related informations
 
 button {
   width: 200px !important; }
+
+.contact {
+  width: 100%;
+  height: 1000px;
+  background-color: #fcbd0f !important; }
 
 /**
 Media queries
