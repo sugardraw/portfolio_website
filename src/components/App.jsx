@@ -17,7 +17,7 @@ class App extends Component {
   changeModel = e => {
     this.setState({ model: e.target.value });
   };
-  scrollToTop = () => {
+  scrollToBottom = () => {
     scroll.scrollToBottom();
   };
 

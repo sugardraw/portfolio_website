@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import SvgText from "../IntroSvg";
 
 import ArrowDown from "../../assets/images/arrow-down.svg";
+import ArrowUpLightUp from "../../assets/images/arrow-up-light.svg";
 
 import $ from "jquery";
 import { Link } from "react-scroll";
@@ -110,7 +111,19 @@ class Header extends Component {
             offset={-70}
             duration={500}
           >
-            <img className="down-arrow" src={ArrowDown} alt="" />
+            <img className="up-arrow-light" src={ArrowUpLightUp} alt="ArrowUpLightUp" />
+            <img className="down-arrow" src={ArrowDown} alt="ArrowUpLightDown" />
+          </Link>
+          <Link
+            activeClass="active"
+            to="projects"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
+            <img className="up-arrow-light" src={ArrowUpLightUp} alt="ArrowUpLightUp" />
+            <img className="down-arrow" src={ArrowDown} alt="ArrowUpLightDown" />
           </Link>
         </div>
 

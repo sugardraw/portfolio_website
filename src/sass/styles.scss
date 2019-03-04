@@ -1,18 +1,18 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import url("https://fonts.googleapis.com/css?family=Arimo");
-@import url('https://fonts.googleapis.com/css?family=Arapey|Quicksand|Rokkitt');
+@import url("https://fonts.googleapis.com/css?family=Arapey|Quicksand|Rokkitt");
 
 /**
 variables
 */
-$font-title:'Arapey', serif;
-$primary-color:rgb(252, 189, 15) !important;
-$secondary-color:#711ea1;
-$bg-color:  rgb(239, 241, 243);
+$font-title: "Arapey", serif;
+$primary-color: rgb(252, 189, 15) !important;
+$secondary-color: #711ea1;
+$bg-color: rgb(239, 241, 243);
 //mixins declaration
 
 @mixin banner-skew {
-  content:"";
+  content: "";
   z-index: 20;
   position: absolute;
   text-align: center;
@@ -20,7 +20,7 @@ $bg-color:  rgb(239, 241, 243);
   font-size: 2em;
   color: #ffffff;
   transform: skew(-35deg);
-  width:280px;
+  width: 280px;
   height: 160px;
   background-color: $primary-color;
   -webkit-box-shadow: 44px 7px 74px -4px rgba(0, 0, 0, 0.77);
@@ -30,30 +30,26 @@ $bg-color:  rgb(239, 241, 243);
   transition-timing-function: cubic-bezier(0.22, 1.29, 0.82, 1.6);
 }
 @mixin banner-skew-big {
-  content:"";
- @include banner-skew;
- width:50vw;
- height: 80vh;
- margin-top: 0%;
- margin-left: -16%;
- background-image: linear-gradient(-35deg, rgba(4, 0, 0, 0.5), #fcbd0f);
- 
-
+  content: "";
+  @include banner-skew;
+  width: 50vw;
+  height: 80vh;
+  margin-top: 0%;
+  margin-left: -16%;
+  background-image: linear-gradient(-35deg, rgba(4, 0, 0, 0.5), #fcbd0f);
 }
 
-
-@mixin banner-text{
+@mixin banner-text {
   z-index: 20;
   position: absolute;
   text-align: center;
   font-family: $font-title;
   font-size: 1.6em;
-  padding:0.4em;
+  padding: 0.4em;
   color: $secondary-color;
   top: 70%;
   left: 20%;
 }
-
 
 @mixin keyframes($name) {
   @-webkit-keyframes #{$name} {
@@ -70,11 +66,7 @@ $bg-color:  rgb(239, 241, 243);
   }
 }
 
-
-
-
 body {
-
   background-color: $bg-color;
   position: relative;
 }
@@ -91,6 +83,11 @@ body {
 }
 
 //navigation////////////
+
+.menu h5:hover {
+  cursor: pointer;
+  color: $secondary-color !important;
+}
 
 .navbar {
   padding: 0;
@@ -148,24 +145,35 @@ button:focus {
   outline: none !important;
 }
 
-//////
+//////navigation arrows/////
 
 .down-arrow {
   right: 2.4rem;
   bottom: 1rem;
+  z-index: 10;
   position: fixed;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: 0.08s ease-out;
+  }
+}
+.up-arrow-light {
+  right: 2.4rem;
+  bottom: 4.8rem;
+  z-index: 10;
+  position: fixed;
+  transform: rotate(180deg);
+  display: none;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.2) rotate(180deg);
+    transition: 0.08s ease-out;
+  }
 }
 
-svg {
-  margin-left: 47vw;
-  bottom: 9rem;
-  position: relative;
-}
+//welcome text and intro
 
-#scroll-arrow-bottom {
-  bottom: -26rem;
-  transform: rotateZ(180deg);
-}
 
 @media screen and (max-width: 720px) {
   svg {
@@ -178,13 +186,15 @@ svg {
   }
 }
 
-//welcome text and intro
+.text-ani {
+  margin-left: 5em;
+    margin-top: -60em;
+}
 
 .intro {
   width: 100vw;
   height: 100vh;
 }
-
 
 @include keyframes(introAni) {
   0% {
@@ -196,7 +206,6 @@ svg {
 }
 
 svg.intro {
-  margin-left: -72vw;
   bottom: 7rem;
   position: relative;
   max-width: 900px;
@@ -227,7 +236,7 @@ svg.intro {
       animation-delay: 0.5s;
     }
     .text-stroke-2 {
-      stroke:$secondary-color;
+      stroke: $secondary-color;
       animation-delay: 0.9s;
     }
     .text-stroke:nth-child(5) {
@@ -239,8 +248,7 @@ svg.intro {
   }
 }
 
-
-@include keyframes(dash){
+@include keyframes(dash) {
   100% {
     stroke-dashoffset: 0;
   }
@@ -273,9 +281,9 @@ svg.intro {
   overflow: hidden;
   transform: skewY(35deg);
   background: linear-gradient(-184deg, rgb(252, 189, 15), rgb(248, 203, 78));
-  -webkit-box-shadow: -44px 47px 74px  rgba(0, 0, 0, 0.67);
-  -moz-box-shadow: -44px 47px 74px  rgba(0, 0, 0, 0.67);
-  box-shadow: -44px 47px 74px  rgba(0, 0, 0, 0.67);
+  -webkit-box-shadow: -44px 47px 74px rgba(0, 0, 0, 0.67);
+  -moz-box-shadow: -44px 47px 74px rgba(0, 0, 0, 0.67);
+  box-shadow: -44px 47px 74px rgba(0, 0, 0, 0.67);
   transition: transform 1s;
   transition-timing-function: cubic-bezier(0.22, 1.29, 0.82, 1.6);
 }
@@ -336,7 +344,6 @@ svg.intro {
   display: none;
 }
 
-
 .img-c {
   transition: width ease 400ms, height ease 350ms,
     left cubic-bezier(0.4, 0, 0.2, 1) 420ms,
@@ -344,7 +351,6 @@ svg.intro {
 }
 
 .img-c:hover .img-w {
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -353,16 +359,15 @@ svg.intro {
   transition: transform cubic-bezier(0.4, 0, 0.2, 1) 450ms;
 }
 
-@include keyframes(banner-appears){
-  0%{
+@include keyframes(banner-appears) {
+  0% {
     top: 100%;
     left: 0%;
   }
-  
+
   100% {
     top: 70%;
     left: 10%;
-
   }
 }
 
@@ -383,7 +388,6 @@ svg.intro {
   @include banner-skew;
 }
 
-
 .img-c:hover .project-2::after {
   content: "Project-2";
   @include banner-text;
@@ -391,7 +395,6 @@ svg.intro {
 .img-c:hover .project-2::before {
   @include banner-skew;
 }
-
 
 .img-c:hover .project-3::after {
   content: "Project-3";
@@ -401,7 +404,6 @@ svg.intro {
   @include banner-skew;
 }
 
-
 .img-c:hover .project-4::after {
   content: "Project-4";
   @include banner-text;
@@ -410,14 +412,12 @@ svg.intro {
   @include banner-skew;
 }
 
-
 .img-c:hover .project-5::after {
   content: "Project-5";
   @include banner-text;
 }
 .img-c:hover .project-5::before {
   @include banner-skew;
-
 }
 
 .img-c.active {
@@ -437,15 +437,13 @@ svg.intro {
   text-align: center;
   font-family: $font-title;
   font-size: 10.6em;
-  padding:0.4em;
+  padding: 0.4em;
   display: block;
   position: absolute;
-  background-image: linear-gradient(to top ,#711ea1 0,#711ea191 100%);
-  height:100%;
+  background-image: linear-gradient(to top, #711ea1 0, #711ea191 100%);
+  height: 100%;
   width: 100%;
 }
-
-
 
 .img-c.postactive {
   position: absolute;
@@ -464,48 +462,45 @@ svg.intro {
   transition-delay: 50ms;
 }
 
-
 /*
 Project related informations
 
 */
 
-.infos{
+.infos {
   position: absolute;
-  top: 100em;
+  top: 113em;
   left: 11em;
 }
 
-.project-infos{
-  h2{
-    position:relative;
-    font-family: $font-title ;
-    z-index:3;
+.project-infos {
+  h2 {
+    position: relative;
+    font-family: $font-title;
+    z-index: 3;
     font-size: 6em;
-    color:white;
+    color: white;
   }
-  h6{
-    position:relative;
-    font-family: $font-title ;
-    z-index:3;
+  h6 {
+    position: relative;
+    font-family: $font-title;
+    z-index: 3;
     font-size: 1.9em;
-    color:white;}
-
-    p{    
-      position:relative;
-      font-family: $font-title ;
-      z-index:3;
-      font-size: 1em;
-      color:white; 
-    }
- 
+    color: white;
   }
 
-
-  button{
-    width: 200px !important;
+  p {
+    position: relative;
+    font-family: $font-title;
+    z-index: 3;
+    font-size: 1em;
+    color: white;
   }
+}
 
+button {
+  width: 200px !important;
+}
 
 /**
 Media queries
