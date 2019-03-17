@@ -32,6 +32,7 @@ class Navigation extends Component {
               <Link to="contact" spy={true} smooth={true} duration={250}>
                 <h5 className="text-white h4">Contact</h5>
               </Link>
+
             </div>
 
             <div className="text-muted-wrapper">

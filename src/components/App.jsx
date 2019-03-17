@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import Header from "./header/Header";
 import Projects from "./Projects";
 import Contact from "./Contact";
-import Footer from "./Footer";
+
 import $ from "jquery";
 
 import { animateScroll as scroll } from "react-scroll";
@@ -42,7 +42,7 @@ class App extends Component {
         <Header />
         <Projects />
         <Contact />
-        <Footer />
+
       </div>
     );
   }
