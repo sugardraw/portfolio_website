@@ -29,10 +29,15 @@ class Navigation extends Component {
                 <h5 className="text-white h4">Projects</h5>
               </Link>
 
-              <Link to="contact" spy={true} smooth={true} duration={250}>
+              <Link
+                to="contact"
+                offset={120}
+                spy={true}
+                smooth={true}
+                duration={250}
+              >
                 <h5 className="text-white h4">Contact</h5>
               </Link>
-
             </div>
 
             <div className="text-muted-wrapper">

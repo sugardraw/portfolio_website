@@ -69,7 +69,7 @@ class Header extends Component {
   updateTransformStyle = (x, y) => {
     console.log(x, y, this.innerElement);
     var style =
-      " skewY(35deg) rotateX(" + x * 1.3 + "deg) rotateY(" + y * 1.3 + "deg)";
+      " skewY(35deg) rotateX(" + x * 1.1 + "deg) rotateY(" + y * 1.1 + "deg)";
     console.log(this.state.innerElement);
     this.container.style.transform = style;
     this.container.style.webkitTransform = style;
@@ -85,10 +85,10 @@ class Header extends Component {
   render() {
     return (
       <React.Fragment>
-        <div id="top" />
+        <div id="top" className="header" />
 
         <div
-          class="d-flex justify-content-between flex-wrap  intro"
+          class="d-flex justify-content-between flex-wrap  intro "
           id="header-top"
         >
           <div

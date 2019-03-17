@@ -56,12 +56,33 @@ class Projects extends Component {
 
         //set the user view exactly on the right place
 
-        $("html, body").animate(
-          {
-            scrollTop: $(".infos").offset().top -600
-          },
-          500
-        );
+        if (window.innerWidth < 400) {
+          console.log("test1");
+          $("html, body").animate(
+            {
+              scrollTop: $(".infos").offset().top
+            },
+            500
+          );
+        }
+        if (window.innerWidth > 400 && window.innerWidth < 1400) {
+          console.log("test2");
+          $("html, body").animate(
+            {
+              scrollTop: $(".infos").offset().top - 200
+            },
+            500
+          );
+        }
+        if (window.innerWidth > 1400) {
+          console.log("test3");
+          $("html, body").animate(
+            {
+              scrollTop: $(".infos").offset().top - 600
+            },
+            500
+          );
+        }
 
         $(".active")
           .not($(this))
@@ -85,7 +106,7 @@ class Projects extends Component {
       let copy = $(this);
       $("html, body").animate(
         {
-          scrollTop: $("#projects").offset().top-50
+          scrollTop: $("#projects").offset().top - 50
         },
         500
       );

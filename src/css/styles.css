@@ -7571,7 +7571,7 @@ Project related informations
 */
 .infos {
   position: absolute;
-  top: 163em;
+  top: 146em;
   left: 11em; }
 
 .project-infos h2 {
@@ -7635,7 +7635,7 @@ Media queries
   .intro-img {
     height: 77vh; }
   .links {
-    margin: 7em 20em 0 20em !important; } }
+    margin: 4em 20em 0 20em !important; } }
 
 @media screen and (max-width: 1120px) {
   .intro-text {
@@ -7644,7 +7644,7 @@ Media queries
     width: 100vw;
     background: linear-gradient(-216deg, white 23%, blue 23.1%); }
   .links {
-    margin: 5em 10em 0 10em; } }
+    margin: 4em 10em 0 10em; } }
 
 @media screen and (max-width: 720px) {
   .intro-text {
@@ -7656,7 +7656,7 @@ Media queries
 
 /* desktop-x-small */
 @media all and (min-width: 0) and (max-width: 480px) {
-  .canvas-canvas {
+  .header {
     height: 65vh;
     width: 100%; }
   .links {
@@ -7668,7 +7668,7 @@ Media queries
 
 /* desktop-small */
 @media all and (min-width: 481px) and (max-width: 840px) {
-  .canvas-canvas {
+  .header {
     height: 65vh;
     width: 100%; }
   .contact {
@@ -7678,7 +7678,7 @@ Media queries
 
 /* desktop-medium */
 @media all and (min-width: 841px) and (max-width: 1280px) {
-  .canvas-canvas {
+  .header {
     height: 95vh;
     width: 100%; }
   .contact {
@@ -7691,9 +7691,34 @@ Media queries
 
 /* desktop-large */
 @media all and (min-width: 1281px) and (max-width: 1600px) {
-  .canvas-canvas {
-    height: 70vh;
+  .header {
+    height: 30vh;
     width: 100%; }
+  .intro-polygon {
+    right: -40em;
+    top: -35rem; }
+  .intro-polygon::before {
+    content: "";
+    margin: 8rem 8rem;
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position: -140px -80px;
+    position: absolute; }
+  .text-ani {
+    margin-left: -6em;
+    margin-top: -71em;
+    transform: scale(0.72, 0.72); }
+  .infos {
+    top: 140em;
+    left: 5em; }
+  #hamburger-icon {
+    right: 0em !important; }
+  .down-arrow {
+    right: 4em !important; }
+  .up-arrow-light {
+    right: 4rem; }
+  .arrow-down-light {
+    right: 4rem; }
   ul li p {
     text-align: left;
     margin-left: 4em; }
@@ -7702,9 +7727,6 @@ Media queries
 
 /* desktop-xlarge */
 @media all and (min-width: 1601px) {
-  .canvas-canvas {
-    height: 95vh;
-    width: 100%; }
   ul li p {
     text-align: left;
     margin-left: 5em; }
