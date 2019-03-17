@@ -36,10 +36,10 @@ class Navigation extends Component {
             </div>
 
             <div className="text-muted-wrapper">
-              <span className="text-muted">
+              {/* <span className="text-muted">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Cupiditate officia maxime dolores earum est
-              </span>
+              </span> */}
             </div>
           </div>
         </div>
