@@ -425,36 +425,44 @@ class Projects extends Component {
 
         <div id="projects">
           <div class="gallery">
-            <div onClick={this.setInfos} class="img-w project project-0">
+            <div onClick={this.setInfos} className="img-w project project-0">
               <img src={CocktailApp} alt="cocktail-app" />
             </div>
-            <div onClick={this.setInfos} class="img-w project project-1">
+            <div onClick={this.setInfos} className="img-w project project-1">
               <img src={ReactThreeJS} alt="react-threeJS" />
             </div>
-            <div onClick={this.setInfos} class="img-w project project-2">
-              <img
-                src="https://images.unsplash.com/photo-1485871800663-71856dc09ec4?dpr=1&auto=format&fit=crop&w=1500&h=2250&q=80&cs=tinysrgb&crop="
-                alt=""
-              />
+            <div onClick={this.setInfos} className="upcoming project project-2">
+              <h3>Buildy App - upcoming </h3>
+              <p>team work final project at DCI School</p>
+              <a href="https://github.com/sugardraw/buildy-frontend">
+                visit the github repositoty | frontend
+              </a>
+              <br />
+              <hr />
+              <a href="https://github.com/sugardraw/buildy-backend">
+                visit the github repositoty | backend
+              </a>
             </div>
-            <div onClick={this.setInfos} class="img-w project project-3">
-              <img
-                src="https://images.unsplash.com/photo-1485871882310-4ecdab8a6f94?dpr=1&auto=format&fit=crop&w=1500&h=2250&q=80&cs=tinysrgb&crop="
-                alt=""
-              />
+            <div onClick={this.setInfos} className="upcoming project project-2">
+              <h3>Full Stack Chat - upcoming </h3>
+              <p>A live Chat using Socket.io and Express at DCI School</p>
+              <a href="https://github.com/sugardraw/JSChat-FullStack">
+                visit the github repositoty
+              </a>
             </div>
-            <div onClick={this.setInfos} class="img-w project project-4">
-              <img
-                src="https://images.unsplash.com/photo-1485872304698-0537e003288d?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop="
-                alt=""
-              />
-            </div>
-            <div onClick={this.setInfos} class="img-w project project-5">
-              <img
-                src="https://images.unsplash.com/photo-1485872325464-50f17b82075a?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop="
-                alt=""
-              />
-            </div>
+            {/*
+          <div onClick={this.setInfos} class="img-w project project-4">
+            <img
+              src="https://images.unsplash.com/photo-1485872304698-0537e003288d?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop="
+              alt=""
+            />
+          </div>
+          <div onClick={this.setInfos} class="img-w project project-5">
+            <img
+              src="https://images.unsplash.com/photo-1485872325464-50f17b82075a?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop="
+              alt=""
+            />
+          </div> */}
           </div>
         </div>
       </React.Fragment>
