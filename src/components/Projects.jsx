@@ -137,8 +137,7 @@ class Projects extends Component {
               <h2>Cocktail-App</h2>
               <h6>Team work</h6>
               <p>
-                lorem Lorem ipsum dolor sit amet consectetur adipisicing
-                elit...S{" "}
+                Search for new Cocktail ideas or post your own cocktail. <br/>Backend hosted by Heroku{" "}
               </p>
               <Link
                 style={{
@@ -188,10 +187,9 @@ class Projects extends Component {
           state.infos = (
             <div className="project-infos">
               <h2>React+ThreeJS</h2>
-              <h6>"Personal work"</h6>
+              <h6>Personal work</h6>
               <p>
-                lorem Lorem ipsum dolor sit amet consectetur adipisicing
-                elit...S{" "}
+                Bringing 3D into the Web{" "}
               </p>
               <Link
                 style={{
