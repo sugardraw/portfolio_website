@@ -186,16 +186,6 @@ button:focus {
 
 //welcome text and intro
 
-@media screen and (max-width: 720px) {
-  svg {
-    margin-left: 40vw;
-    transform: scale(0.7);
-  }
-  .navbar-toggler {
-    transform: scale(0.8);
-    right: 1rem !important;
-  }
-}
 
 .text-ani {
   margin-left: 5em;
@@ -560,88 +550,210 @@ input[type="submit"] {
 Media queries
 */ //
 
-@media screen and (max-width: 1400px) {
-  .intro-text {
-    font-size: 3.7rem;
-  }
-  .intro-img {
-    height: 77vh;
-  }
-  .links {
-    margin: 4em 20em 0 20em !important;
-  }
-}
 
-@media screen and (max-width: 1120px) {
-  .intro-text {
-    max-width: 100vw;
+
+@media screen and (max-width: 767px) {
+  body{    overflow-x: hidden;}
+  .navbar-toggler {
+    transform: scale(1.2);
+    right: 1rem !important;
   }
-  .intro-img {
+  .intro {
+
     width: 100vw;
-    background: linear-gradient(-216deg, white 23%, blue 23.1%);
+    height: 30vh;
+}
+.text-ani {
+   margin-left: 1em; 
+  margin-top: 1em; 
+}
+  .intro-polygon{
+    display: none;
   }
-  .links {
-    margin: 4em 10em 0 10em;
+  .down-arrow{
+    display: none;
   }
+  .down-arrow-light{
+    display: none;
+  }
+  .up-arrow-light{
+    display: none;
+  }
+  .upcoming{
+    margin-top: 10em;
+    min-height: 200px;
+  }
+  .infos {
+    position: absolute;
+    top: 171em;
+    left: 11em;
+}
+.project-infos {
+  h2 {
+    position: relative;
+    font-family: $font-title;
+    z-index: 3;
+    font-size: 4em;
+    color: white;
+  }
+  h6 {
+    position: relative;
+    font-family: $font-title;
+    z-index: 3;
+    font-size: 2em;
+    color: white;
+  }
+
+  p {
+    position: relative;
+    font-family: $font-title;
+    z-index: 3;
+    font-size: 1em;
+    color: white;
+  }
+  .img-c.active::before {
+    content: "";
+    width: 71vw;
+    height: 40vh;
+    margin-top: 0%;
+    margin-left: -16%;
+
+}
 }
 
-@media screen and (max-width: 720px) {
-  .intro-text {
-    text-align: center;
-    margin: 5rem 1.5rem 0rem 2rem !important;
-    font-size: 8.6vw;
+  .links{
+    margin: 2em auto;
   }
-  .links {
-    margin: 2em 3em 0 3em !important;
+  .links hr{
+
   }
-}
-/* desktop-x-small */
-@media all and (min-width: 0) and (max-width: 480px) {
-  .header {
-    height: 65vh;
-    width: 100%;
+  svg{
+    margin-top: 1em;
   }
-  .links {
-    margin: 4em 3em 0 3em !important;
-  }
-  ul {
-    margin-left: 0 !important;
-  }
-  .contact {
-    padding: 3em;
-  }
+
+
 }
 
-/* desktop-small */
-@media all and (min-width: 481px) and (max-width: 840px) {
-  .header {
-    height: 65vh;
-    width: 100%;
+
+@media screen and (max-width: 767px) {
+  body{    overflow-x: hidden;}
+  .navbar-toggler {
+    transform: scale(0.8);
+    right: -1em !important;
   }
-  .contact {
-    padding: 5em;
-  }
-  .links {
-    margin: 4em 3em 0 3em !important;
-  }
+  .intro {
+
+    width: 100vw;
+    height: 30vh;
 }
+.text-ani {
+   margin-left: 1em; 
+  margin-top: 1em; 
+}
+  .intro-polygon{
+    display: none;
+  }
+  .down-arrow{
+    display: none !important;
+  }
+  .arrow-down-light{
+    display: none !important;
+  }
+  .up-arrow-light{
+    display: none !important;
+  }
+  .upcoming{
+    margin-top: 10em;
+    min-height: 200px;
+  }
+  .infos {
+    position: absolute;
+    top: 171em;
+    left: 2em;
+}
+.project-infos {
+  h2 {
+    position: relative;
+    font-family: $font-title;
+    z-index: 3;
+    font-size: 4em;
+    color: white;
+  }
+  h6 {
+    position: relative;
+    font-family: $font-title;
+    z-index: 3;
+    font-size: 2em;
+    color: white;
+  }
+
+  p {
+    position: relative;
+    font-family: $font-title;
+    z-index: 3;
+    font-size: 1em;
+    color: white;
+  }
+  .img-c.active::before {
+    content: "";
+    width: 71vw;
+    height: 40vh;
+    margin-top: 0%;
+    margin-left: -16%;
+
+}
+}
+
+  .links{
+    margin: 2em auto;
+  }
+
+  svg{
+    margin-top: 1em;
+  }
+
+
+}
+
+
+
 
 /* desktop-medium */
-@media all and (min-width: 841px) and (max-width: 1280px) {
+@media all and (min-width: 768px) and (max-width: 1280px) {
+  body{    overflow-x: hidden;}
+  .navbar-toggler {
+    transform: scale(1.2);
+    right: 1rem !important;
+  }
   .header {
-    height: 95vh;
-    width: 100%;
+    height: 15vh;
+
   }
-  .contact {
-    padding: 6em;
+  .intro {
+
+    width: 100vw;
+    height: 30vh;
+}
+.text-ani {
+  margin-left: 1em;
+  margin-top: -2em; 
+}
+  .intro-polygon{
+    display: none;
   }
-  ul li p {
-    text-align: left;
-    margin-left: 1em;
+  .down-arrow{
+    display: none !important;
   }
-  .links {
-    margin: 4em 6em 0 6em !important;
+  .down-arrow-light{
+    display: none !important;
   }
+  .up-arrow-light{
+    display: none !important;
+  }
+  .links{
+    margin: 2em auto;
+  }
+
 }
 
 /* desktop-large */
@@ -704,5 +816,16 @@ Media queries
   }
   .contact {
     padding: 8em;
+  }
+  .infos{
+    top: 160em;
+    left: 10em;
+  }
+  section{
+    max-width: 1300px;
+    margin: auto;
+  }
+  .list-unstyled{
+    margin-left: -8em !important;
   }
 }

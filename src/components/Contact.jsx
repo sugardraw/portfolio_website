@@ -7,22 +7,22 @@ class Contact extends Component {
       <div className="contact" id="contact">
         <section className="mb-4">
           <h1 className="h1-responsive text-center my-4">Contact</h1>
-          <p className="text-center w-responsive mx-auto mb-5 tagline-contact">
+          <p className="text-center w-responsive col-md-9 mx-auto mb-5 tagline-contact">
             If you are interested in my work, have some questions, or just want to say hello, <br />fill up the form below or send an email to
             sergiousle@gmail.com
             </p>
           <div className="row">
-            <div className="col-md-9 mb-md-0 mb-5">
+            <div className="col-xl-9 col-md-12 mb-md-0 mb-5">
               <form id="contact-form" name="contact-form" action="mail.php" method="POST">
                 <div className="row">
-                  <div className="col-md-6">
+                  <div className="col-xl-10 col-md-12">
                     <div className="md-form mb-0">
                       <input type="text" id="name" name="name" className="form-control my-1" />
                       <label for="name" className="">Your name</label>
                     </div>
                   </div>
 
-                  <div className="col-md-6">
+                  <div className="col-xl-10 col-md-12">
                     <div className="md-form mb-0">
                       <input type="text" id="email" name="email" className="form-control my-1" />
                       <label for="email" className="">Your email</label>
@@ -30,7 +30,7 @@ class Contact extends Component {
                   </div>
                 </div>
                 <div className="row">
-                  <div className="col-md-12">
+                  <div className="col-xl-10 col-md-12">
                     <div className="md-form mb-0">
                       <input type="text" id="subject" name="subject" className="form-control my-1" />
                       <label for="subject" className="">Subject</label>
@@ -39,7 +39,7 @@ class Contact extends Component {
                 </div>
 
                 <div className="row">
-                  <div className="col-md-12">
+                  <div className="col-xl-10 col-md-12">
                     <div className="md-form">
                       <textarea type="text" id="message" name="message" rows="2" className="form-control my-1 md-textarea"></textarea>
                       <label for="message">Your message</label>
@@ -47,7 +47,7 @@ class Contact extends Component {
                   </div>
                 </div>
               </form>
-              <div className="text-center text-md-left">
+              <div className="text-center text-md-center text-xl-left">
                 <input
                   class="btn btn-outline-light mt-3 "
                   type="submit"
@@ -57,7 +57,7 @@ class Contact extends Component {
               </div>
               <div className="status"></div>
             </div>
-            <div className="col-md-3 text-center">
+            <div className="col-xl-3 col-md-12 mt-5 col-sm-12 text-center">
               <ul className="list-unstyled mb-0">
                 <li>
                   <p>Jahnstr. 4, 10967, Berlin<br />

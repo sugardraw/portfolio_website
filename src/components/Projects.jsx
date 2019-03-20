@@ -78,7 +78,7 @@ class Projects extends Component {
           console.log("test3");
           $("html, body").animate(
             {
-              scrollTop: $(".infos").offset().top - 600
+              scrollTop: $(".infos").offset().top - 550
             },
             500
           );
