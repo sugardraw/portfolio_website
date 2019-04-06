@@ -131,52 +131,63 @@ class Projects extends Component {
     this.forceUpdate();
     switch (projectName) {
       case "project-0":
-        this.setState(state => {
-          state.infos = (
-            <div className="project-infos">
+      this.setState(state => {
+        state.infos = (
+          <div className="project-infos">
               <h2>Cocktail-App</h2>
               <h6>Team work</h6>
               <p>
-                Search for new Cocktail ideas or post your own cocktail. <br/>Backend hosted by Heroku{" "}
+                Search for new Cocktail ideas or post your own cocktail. <br/>Backend hosted by Heroku{" "}<br/>
+                To test the create cocktail functionality:<br/>
+                <ul>
+                  <li>Login email: ser@ser.com</li>
+                  <li>Login password: ser</li>
+                </ul>
+                
+
               </p>
-              <Link
+              <a
                 style={{
                   display: "block",
                   width: "200px",
                   position: "relative",
                   zIndex: "4"
                 }}
-                to="/CocktailApp"
+                href="http://www.cocktail-app.sugardraw.de/"
                 target="_blank"
-              >
+                rel="noopener noreferrer"
+                
+                >
                 {" "}
                 <button
                   class="btn btn-outline-light mt-3 "
                   type="button"
                   id="button-addon1"
-                >
+                  >
                   Visit on-line
                 </button>
-              </Link>
-              <Link
+              </a>
+              <a
                 style={{
                   display: "block",
                   width: "200px",
                   position: "relative",
                   zIndex: "4"
                 }}
-                to="/CocktailApp"
+                href="https://github.com/sugardraw/cocktail-app"
                 target="_blank"
-              >
+                rel="noopener noreferrer"
+
+                >
                 {" "}
                 <button
                   class="btn btn-outline-light mt-3 "
                   type="button"
                   id="button-addon1"
-                >
+                  >
                   See the code on Github
                 </button>
-              </Link>
+              </a>
             </div>
           );
           return state;
@@ -191,15 +202,17 @@ class Projects extends Component {
               <p>
                 Bringing 3D into the Web{" "}
               </p>
-              <Link
+              <a
                 style={{
                   display: "block",
                   width: "200px",
                   position: "relative",
                   zIndex: "4"
                 }}
-                to="/ReactThree"
+                href="http://www.react-threejs.sugardraw.de/"
                 target="_blank"
+                rel="noopener noreferrer"
+
               >
                 {" "}
                 <button
@@ -209,16 +222,18 @@ class Projects extends Component {
                 >
                   Visit on-line
                 </button>
-              </Link>
-              <Link
+              </a>
+              <a
                 style={{
                   display: "block",
                   width: "200px",
                   position: "relative",
                   zIndex: "4"
                 }}
-                to="/Git-ReactThree"
+                href="https://github.com/sugardraw/React-ThreeJS"
                 target="_blank"
+                rel="noopener noreferrer"
+
               >
                 {" "}
                 <button
@@ -228,7 +243,7 @@ class Projects extends Component {
                 >
                   See the code on Github
                 </button>
-              </Link>
+              </a>
             </div>
           );
           return state;
