@@ -377,7 +377,7 @@ svg.intro {
 }
 
 .img-c:hover .project-0::after {
-  content: "Cocktail App";
+  content:"React + ThreeJS";
   @include banner-text;
 }
 
@@ -386,7 +386,7 @@ svg.intro {
 }
 
 .img-c:hover .project-1::after {
-  content: "React + ThreeJS";
+  content: "BUILDY";
   @include banner-text;
 }
 .img-c:hover .project-1::before {
@@ -394,7 +394,7 @@ svg.intro {
 }
 
 .img-c:hover .project-2::after {
-  content: "Project-2";
+  content: "Cocktail App";
   @include banner-text;
 }
 .img-c:hover .project-2::before {

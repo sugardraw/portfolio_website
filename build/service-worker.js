@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/sugardraw/portfolio_website/precache-manifest.8e96b3e9ea3eef74a8c52f6ee0f63513.js"
+  "/sugardraw/portfolio_website/precache-manifest.c010e142d422a8da70c01285afc074c8.js"
 );
 
 workbox.clientsClaim();

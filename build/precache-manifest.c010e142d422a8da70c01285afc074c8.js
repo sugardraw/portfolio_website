@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/sugardraw/portfolio_website/static/media/arrow-down-light.07f18485.svg"
   },
   {
-    "revision": "cd4b3f88ebb4cd6fdab7",
+    "revision": "7c885ec230a0fb69ea48",
     "url": "/sugardraw/portfolio_website/static/css/main.c129d2c3.chunk.css"
   },
   {
@@ -24,8 +24,8 @@ self.__precacheManifest = [
     "url": "/sugardraw/portfolio_website/static/media/arrow-up-light.08ad4fdd.svg"
   },
   {
-    "revision": "cd4b3f88ebb4cd6fdab7",
-    "url": "/sugardraw/portfolio_website/static/js/main.cd4b3f88.chunk.js"
+    "revision": "7c885ec230a0fb69ea48",
+    "url": "/sugardraw/portfolio_website/static/js/main.7c885ec2.chunk.js"
   },
   {
     "revision": "bce87b09b39f4747adcc7cc05c97bb3a",
@@ -48,7 +48,7 @@ self.__precacheManifest = [
     "url": "/sugardraw/portfolio_website/static/media/Sergio-2.6e9b7d6e.png"
   },
   {
-    "revision": "e5b15f231074c196da2dfe1771518357",
+    "revision": "25019a319f2d5637ea327cda0194994d",
     "url": "/sugardraw/portfolio_website/index.html"
   }
 ];

@@ -7325,7 +7325,7 @@ svg.intro {
     left: 10%; } }
 
 .img-c:hover .project-0::after {
-  content: "Cocktail App";
+  content: "React + ThreeJS";
   z-index: 20;
   position: absolute;
   text-align: center;
@@ -7355,7 +7355,7 @@ svg.intro {
   transition-timing-function: cubic-bezier(0.22, 1.29, 0.82, 1.6); }
 
 .img-c:hover .project-1::after {
-  content: "React + ThreeJS";
+  content: "BUILDY";
   z-index: 20;
   position: absolute;
   text-align: center;
@@ -7385,7 +7385,7 @@ svg.intro {
   transition-timing-function: cubic-bezier(0.22, 1.29, 0.82, 1.6); }
 
 .img-c:hover .project-2::after {
-  content: "Project-2";
+  content: "Cocktail App";
   z-index: 20;
   position: absolute;
   text-align: center;

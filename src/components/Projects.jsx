@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import $ from "jquery";
 import CocktailApp from "../assets/images/cocktail-app-screenshot.png";
 import ReactThreeJS from "../assets/images/react-threejs.png";
+import BuildyLogo from "../assets/images/buildy-logo-final_web.jpg";
 import { Link } from "react-router-dom";
 
 class Projects extends Component {
@@ -16,7 +17,7 @@ class Projects extends Component {
   componentDidMount() {
     var self = this;
 
-    $(document).scroll(function() {
+    $(document).scroll(function () {
       var scroll = $(window).scrollTop();
 
       if (scroll > 800) {
@@ -30,8 +31,8 @@ class Projects extends Component {
       }
     });
 
-    $(function() {
-      $(".img-w").each(function() {
+    $(function () {
+      $(".img-w").each(function () {
         $(this).wrap("<div class='img-c'></div>");
         let imgSrc = $(this)
           .find("img")
@@ -43,7 +44,7 @@ class Projects extends Component {
           .css("background-image", "url(" + imgSrc + ")");
       });
 
-      $(".img-c").click(function() {
+      $(".img-c").click(function () {
         let w = $(this).outerWidth();
         let h = $(this).outerHeight();
         let x = $(this).offset().left;
@@ -96,13 +97,13 @@ class Projects extends Component {
           .addClass("active");
         $(".active").css("top", y - 8);
         $(".active").css("left", x - 8);
-        setTimeout(function() {
+        setTimeout(function () {
           copy.addClass("positioned");
         }, 0);
       });
     });
 
-    $(document).on("click", ".img-c.active", function() {
+    $(document).on("click", ".img-c.active", function () {
       let copy = $(this);
       $("html, body").animate(
         {
@@ -119,81 +120,17 @@ class Projects extends Component {
         return state;
       });
       copy.removeClass("positioned active").addClass("postactive");
-      setTimeout(function() {
+      setTimeout(function () {
         copy.remove();
       }, 500);
     });
   }
-
   setInfos = e => {
     let projectName = e.target.classList[2];
     console.log(projectName);
     this.forceUpdate();
     switch (projectName) {
       case "project-0":
-      this.setState(state => {
-        state.infos = (
-          <div className="project-infos">
-              <h2>Cocktail-App</h2>
-              <h6>Team work</h6>
-              <p>
-                Search for new Cocktail ideas or post your own cocktail. <br/>Backend hosted by Heroku{" "}<br/>
-                To test the create cocktail functionality:<br/>
-                <ul>
-                  <li>Login email: ser@ser.com</li>
-                  <li>Login password: ser</li>
-                </ul>
-                
-
-              </p>
-              <a
-                style={{
-                  display: "block",
-                  width: "200px",
-                  position: "relative",
-                  zIndex: "4"
-                }}
-                href="http://www.cocktail-app.sugardraw.de/"
-                target="_blank"
-                rel="noopener noreferrer"
-                
-                >
-                {" "}
-                <button
-                  class="btn btn-outline-light mt-3 "
-                  type="button"
-                  id="button-addon1"
-                  >
-                  Visit on-line
-                </button>
-              </a>
-              <a
-                style={{
-                  display: "block",
-                  width: "200px",
-                  position: "relative",
-                  zIndex: "4"
-                }}
-                href="https://github.com/sugardraw/cocktail-app"
-                target="_blank"
-                rel="noopener noreferrer"
-
-                >
-                {" "}
-                <button
-                  class="btn btn-outline-light mt-3 "
-                  type="button"
-                  id="button-addon1"
-                  >
-                  See the code on Github
-                </button>
-              </a>
-            </div>
-          );
-          return state;
-        });
-        break;
-      case "project-1":
         this.setState(state => {
           state.infos = (
             <div className="project-infos">
@@ -221,7 +158,7 @@ class Projects extends Component {
                   id="button-addon1"
                 >
                   Visit on-line
-                </button>
+              </button>
               </a>
               <a
                 style={{
@@ -242,7 +179,7 @@ class Projects extends Component {
                   id="button-addon1"
                 >
                   See the code on Github
-                </button>
+              </button>
               </a>
             </div>
           );
@@ -250,25 +187,111 @@ class Projects extends Component {
         });
 
         break;
-      case "project-2":
+
+      case "project-1":
         this.setState(state => {
           state.infos = (
             <div className="project-infos">
-              <h2>project-3</h2>
-              <h6>"Personal work"</h6>
+              <h2>BUILDY</h2>
+              <h6>A home renovation and design mobile App</h6>
               <p>
-                lorem Lorem ipsum dolor sit amet consectetur adipisicing
-                elit...S{" "}
+                I lead a team of three people through this challenging Project. Nobody of us<br /> had any initial knowledge about React Native.
+                We learned <br />a lot, and we would like to repeat the experience.
+
               </p>
-              <Link
+              <a
                 style={{
                   display: "block",
                   width: "200px",
                   position: "relative",
                   zIndex: "4"
                 }}
-                to="/ReactThree"
+                href="https://www.canva.com/design/DADYugXAK08/eJYcg493rSIK9U-gK4So3w/view?presentation"
                 target="_blank"
+                rel="noopener noreferrer"
+
+              >
+                {" "}
+                <button
+                  class="btn btn-outline-light mt-3 "
+                  type="button"
+                  id="button-addon1"
+                >
+                  Visit the App Presentation
+              </button>
+              </a>
+              <a
+                style={{
+                  display: "block",
+                  width: "200px",
+                  position: "relative",
+                  zIndex: "4"
+                }}
+                href="https://github.com/sugardraw/buildy-frontend"
+                target="_blank"
+                rel="noopener noreferrer"
+
+              >
+                {" "}
+                <button
+                  class="btn btn-outline-light mt-3 "
+                  type="button"
+                  id="button-addon1"
+                >
+                  See the frontend-code on Github
+              </button>
+              </a>
+              <a
+                style={{
+                  display: "block",
+                  width: "200px",
+                  position: "relative",
+                  zIndex: "4"
+                }}
+                href="https://github.com/sugardraw/buildy-backend"
+                target="_blank"
+                rel="noopener noreferrer"
+
+              >
+                {" "}
+                <button
+                  class="btn btn-outline-light mt-3 "
+                  type="button"
+                  id="button-addon1"
+                >
+                  See the backend-code on Github
+              </button>
+              </a>
+            </div>
+          );
+          return state;
+        });
+        break;
+      case "project-2":
+        this.setState(state => {
+          state.infos = (
+            <div className="project-infos">
+              <h2>Cocktail-App</h2>
+              <h6>Team work</h6>
+              <p>
+                Search for new Cocktail ideas or post your own cocktail. <br />Backend hosted by Heroku{" "}<br />
+                To test the app:<br />
+                <ul>
+                  <li>Login email: ser@ser.com</li>
+                  <li>Login password: ser</li>
+                </ul>
+              </p>
+              <a
+                style={{
+                  display: "block",
+                  width: "200px",
+                  position: "relative",
+                  zIndex: "4"
+                }}
+                href="http://www.cocktail-app.sugardraw.de/"
+                target="_blank"
+                rel="noopener noreferrer"
+
               >
                 {" "}
                 <button
@@ -278,12 +301,32 @@ class Projects extends Component {
                 >
                   Visit on-line
                 </button>
-              </Link>
+              </a>
+              <a
+                style={{
+                  display: "block",
+                  width: "200px",
+                  position: "relative",
+                  zIndex: "4"
+                }}
+                href="https://github.com/sugardraw/cocktail-app"
+                target="_blank"
+                rel="noopener noreferrer"
+
+              >
+                {" "}
+                <button
+                  class="btn btn-outline-light mt-3 "
+                  type="button"
+                  id="button-addon1"
+                >
+                  See the code on Github
+                </button>
+              </a>
             </div>
           );
           return state;
         });
-
         break;
 
       case "project-3":
@@ -439,22 +482,13 @@ class Projects extends Component {
         <div id="projects">
           <div class="gallery">
             <div onClick={this.setInfos} className="img-w project project-0">
-              <img src={CocktailApp} alt="cocktail-app" />
-            </div>
-            <div onClick={this.setInfos} className="img-w project project-1">
               <img src={ReactThreeJS} alt="react-threeJS" />
             </div>
-            <div onClick={this.setInfos} className="upcoming project project-2">
-              <h3>Buildy App - upcoming </h3>
-              <p>team work final project at DCI School</p>
-              <a href="https://github.com/sugardraw/buildy-frontend">
-                visit the github repositoty | frontend
-              </a>
-              <br />
-              <hr />
-              <a href="https://github.com/sugardraw/buildy-backend">
-                visit the github repositoty | backend
-              </a>
+            <div onClick={this.setInfos} className="img-w project project-1">
+              <img src={BuildyLogo} alt="buildy-logo" />
+            </div>
+            <div onClick={this.setInfos} className="img-w project project-2">
+              <img src={CocktailApp} alt="cocktail-app" />
             </div>
             <div onClick={this.setInfos} className="upcoming project project-2">
               <h3>Full Stack Chat - upcoming </h3>
